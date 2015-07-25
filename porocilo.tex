@@ -1,0 +1,96 @@
+% LaTeX Template
+% This template is made for project reports
+% 	You may adjust it to your own needs/purposesF
+
+% Copyright: http://www.howtotex.com/
+% Date: March 2011
+
+%%% Preamble
+\documentclass[pdftex, 12pt, a4paper, oneside, slovene]{article}
+%\documentclass[paper=a4, fontsize=12pt]{scrartcl}	% Article class of KOMA-script with 11pt font and a4 format
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[slovene]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
+\usepackage{amsmath,amsfonts,amsthm}										% Math packages
+\usepackage[pdftex]{graphicx}
+% Enable pdflatex
+
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{lscape}
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty}
+% Custom sectioning (see below)
+\allsectionsfont{\normalfont\scshape}	% Change font of al section commands
+
+\usepackage{setspace}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}														% No page header
+% \fancyfoot[L]{\small \url{HowToTeX.com}}		% You may
+\fancyfoot[L]{}		% You may remove/edit this line
+\fancyfoot[C]{}			% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+%\setlength{\headheight}{13.6pt}
+
+
+%%% Equation and float numbering
+%\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+%\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+%\numberwithin{table}{section}		        % Tablenumbering: section.tab#
+
+%Indent set to 0pt
+\setlength\parindent{0pt}
+
+%Nastavitve odstavkov
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{10px}
+
+%Prostor med vrsticami
+%\singlespacing
+\onehalfspacing
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+%%% Begin document
+\begin{document}
+
+\thispagestyle{empty}
+\input{./naslovnica.tex}
+%\newpage
+%\tableofcontents
+\setcounter{page}{1}
+\newpage
+\input{./vsebina.tex}
+% \newpage
+% %%Recept za vstavljanje poljubnega naslova za Viri in literatura
+% \cleardoublepage
+% \renewcommand*{\refname}{Literatura in viri}
+% %\renewcommand*{\refname}{\vspace*{-12mm}}
+% %\section*{Viri in Literatura}
+% %\phantomsection
+% \addcontentsline{toc}{section}{Literatura in viri}
+% %\addcontentsline{toc}{section}{Literatura}
+% \input{./literatura.tex}
+
+
+%%% End document
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

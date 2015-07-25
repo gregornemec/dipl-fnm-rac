@@ -1,0 +1,14 @@
+#Ignored folders
+auto/*
+.git/*
+
+
+#Ignored file types
+*.log
+*.out
+*.aux
+
+
+#Other
+.projectile
+.
