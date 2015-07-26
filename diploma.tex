@@ -123,19 +123,40 @@
 %%NASLOVNICA
 \input{./naslovnica.tex}
 
+%%PODNASLOVNICA
 \newpage
 \newoddpage
 \input{./podnaslovnica.tex}
 
+%%ZAHVALA
 \newpage
 \input{./zahvala.tex}
 
+%%IZJAVA
 %Z personalizacijo ostal na tem mestu!
 \newpage
 \input{./izjava.tex}
 
-%Manja kazalo
+%%PROGRAM
+\newpage
+\input{./program.tex}
 
+%%POVZETEK
+\newpage
+\input{./povzetek.tex}
+
+%%KAZALO
+\newpage
+\tableofcontents
+
+%%VSEBINA%%%%%%%%
+\newoddpage
+\pagestyle{fancy}
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+%Pozneje mogoče razdeljeno na manjše datoteke, za lažje branje?!
 
 
 %Dodajanje vsebine
