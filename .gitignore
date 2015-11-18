@@ -13,4 +13,11 @@ auto/*
 
 #Other
 .projectile
-.
+.#diploma.tex
+.#flycheck_diploma.tex
+.#flycheck_vsebina.tex
+.directory
+diploma.tdo
+dispozicija.tex
+porocilo.pdf
+.*
