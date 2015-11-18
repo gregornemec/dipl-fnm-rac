@@ -2,9 +2,12 @@
 \usepackage{amsmath, amsfonts, amsthm}
 
 \usepackage[slovene]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[cp1250]{inputenc}
 
 \usepackage{algorithm2e}
+
 
 \usepackage{longtable}
 \renewcommand{\baselinestretch}{1}
@@ -41,7 +44,7 @@
 %
 %
 
-%
+%\todo{Ali je takšna oblika poglavij dobra za diplomsko delo?!}
 \newcommand{\nnsection}[1]{\section*{#1}\addcontentsline{toc}{section}{\protect\numberline{}#1}}
 \newcommand{\nnsubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
 
@@ -84,6 +87,16 @@
 
   \renewcommand{\midf}[1]{{\em #1}}
 
+%ToDONote package
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+%Examples of customization
+%\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+%\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+%\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+%\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+%\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
 
 %Spremenljivke
 
@@ -94,8 +107,9 @@
 \newcommand{\oddelek}{Oddelek za matematiko in računalništvo}
 
 %Naslov
-\newcommand{\naslov}{DIPLOMSKO DELO}
-\newcommand{\podnaslov}{Spletni portali za učenje programiranja}
+\newcommand{\naslov}{DIPLOMSKO DELO} \newcommand{\podnaslov}{Spletni
+  portali za učenje programiranja: klasifikacija in možnosti uporabe v
+  izobraževanj}
 
 % Mentor/profesor
 \newcommand{\mentor}{doc. dr. Igor Pesek}
@@ -158,6 +172,11 @@
 \pagenumbering{arabic}
 
 %Pozneje mogoče razdeljeno na manjše datoteke, za lažje branje?!
+
+%DISPOZICIJA
+\newpage
+\input{./dispozicija.tex}
+
 
 %Dodajanje vsebine
 \newpage
