@@ -6,6 +6,7 @@
 % Date: March 2011
 
 %%% Preamble
+\PassOptionsToPackage{table}{xcolor}
 \documentclass[12pt, a4paper, oneside, slovene]{article}
 %\documentclass[paper=a4, fontsize=12pt]{scrartcl}	% Article class of KOMA-script with 11pt font and a4 format
 
@@ -30,6 +31,9 @@
 \usepackage{sectsty}
 % Custom sectioning (see below)
 \allsectionsfont{\normalfont\scshape}	% Change font of al section commands
+
+
+
 
 \usepackage{setspace}
 
@@ -64,9 +68,6 @@
 %\numberwithin{figure}{section}			% Figurenumbering: section.fig#
 %\numberwithin{table}{section}		        % Tablenumbering: section.tab#
 
-%Indent set to 0pt
-\setlength\parindent{0pt}
-
 %Nastavitve odstavkov
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{10px}
@@ -75,9 +76,18 @@
 %\singlespacing
 \onehalfspacing
 
+%%Diferent enumeration
+\usepackage{enumerate}
+
 %%Pandoc workaroun \tightlisr
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+%\usepackage[table]{xcolor}
+%%Ne preverja če napis gre v eno vrstico in ga zato ne premakne na sredino.
+\usepackage[singlelinecheck=false]{caption}
+
 
 %%% Maketitle metadata
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule

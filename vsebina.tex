@@ -170,6 +170,22 @@ programski jeziki \cite{thesisAWebP}.
 % //Misel: V izobraževanju je potrebno previdno izbrati obseg in področja
 % vsebin, pri čemer ne smemo zanemariti timsko delo.
 
+\subsection{Kaj je računalniška znanost?}
+\label{sec:kaj_je_računalniška_znanost}
+
+Računalniška znanost ima številne različice definicij, v grobem jo
+lahko definicijo strnemo v naslednjih trditvah \cite{guideTCS}.
+
+\begin{itemize}
+\item Ukvarja z značilnostmi tisktega kar je izračunljivo.
+\item Je znanost, ki izhaja iz več podroćij in ime korenine v matematiki,
+znanosti in inženirstvu.
+\item ima mnoga podpodročja in je interdisiplinarna z biologijo,
+ekonomujo, medicino, zabavo.
+\item Ime računalništvo ali računalniška znanost nas lahko tudi zavede in
+jo zamenjamo z področjem uporabe računalnika.
+\end{itemize}
+
 \subsection{Kaj je programiranje?}
 \label{sec:kaj_je_programiranje}
 
@@ -186,7 +202,7 @@ najpogosteje pomeni vzorec delovanja v znanstvenem ali drugem
 raziskovanju.  Izraz -programske paradigme- je več pomenka, ki povzema
 mentalne procese, strategije reševanja problemov, povezave med
 različnimi paradigmami, programske jezike, stil programiranja in še
-več (Wikipedia: Paradigma).
+več (Wikipedia: Paradigma) \cite{guideTCS}.
 
 Povemo lahko, da je programiranja, hevristična paradigma za algoritme
 ki rešujejo probleme. Programski jezik je način za izražanje
@@ -198,8 +214,8 @@ problemov. Programska paradigma analizira problem, čez specifičen
 pogled in na ta način formulira rešitev za dani problem, ki ga razdeli
 na manjše dele med katerimi definira razmerja.
 
-Programske paradigme so na primer --proceduralno, objektno orientirano,
-funkcijsko, logično in istočasno programiranje--.
+Programske paradigme so na primer proceduralno, objektno orientirano,
+funkcijsko, logično in istočasno programiranje.
 
 V nadaljevanju bomo spoznali značilnosti dveh programskih paradigem.
 
@@ -261,20 +277,57 @@ načrtovani predvsem za zahtevne programerje.
 % je določeno na državnem nivoju da se učit ravno ta dva programska
 % jezika
 
-\subsection{Predlagane rešitve}
-\label{sec:predlagane_resitve}
-
-Pri samem vadenju programiranja je pomembno, da ob težavah, novinci
-dobijo čimprajšen odziv mentorja. V velikih razredih se to izkaže za
-zelo zahtevno. Z uporabo spletnih tehnologij so v pomoč prav spletni
-portali za učenje programiranja. Z njimi lahko razrešimo kar nekaj
-tegob, ki jih pestijo novince.
-
-
 \subsection{Osnovni koncepti programiranja}
 \label{sec:Osnvni koncepti_programiranja}
 
 % Predstavljeni koncepti na primerih eden OŠ Scratch drugi Python.
+V naslednjem odstavku se bomo vprašali kako lahko formuliramo sintakso
+programskega jezika? In kaj je npr. definicija \emph{kopice}.
+
+V ta namen definiramo mehko idejo po avtorju Hazzan \cite{guideTCS},
+ki je naslednja. Mehka ideja je koncept, ki mu ne moremo pripisati
+toge, niti formalne definicije. Mehke ideje ni niti možno opisati z
+točno določeno aplikacijo. Na tem mestu se postavlja vprašanje kako
+lahko defineramo nekaj kar se odvija po korakih.
+
+Da odgovorimo na zgornji dve vprašanji, lahko povemo, da so pravila
+sintakse togi orisi pri pisanju programske kode in da so semantična
+pravila mehke ideje. Opozorimo še na to, da koncepti v računalniški
+znanosti niso le toga pravila ali samo mehke ideje, temeč skupek
+obojega. V spodnji tabeli \ref{tab:koncept_spremenljivka} prikazuje
+primer spremenljivke.
+
+
+\begin{table}[!htb]
+
+\caption{Prikaz dvojnih, togih in mehkih orisov idej na primeru
+  spremenljivke \cite{guideTCS}. }
+\label{tab:koncept_spremenljivka}
+\begin{tabular}{
+  | p{0.30\linewidth-2\tabcolsep} |
+  p{0.30\linewidth-2\tabcolsep} |
+  p{0.40\linewidth-2\tabcolsep} | }
+  \hline
+  \rowcolor{gray!50}
+  & \textbf{togi orisi} & \textbf{mehki orisi}\\
+  \hline
+  ime spremenljivke & Pravilo sintakse. & Potreba po imenu
+                                          spremenljivke. Katero ime
+                                          spremenljivke je pomembno in
+                                          zakaj ga je potrebno
+                                          določiti.\\
+  \hline
+  vrednost spremenljivke & Pravila tipa spremenljivke. Rezervacija
+                           pomnilnika. & Spremenljivka ima eno
+                                         vrednost, ki se lahko
+                                         spreminja s časom.\\
+  \hline
+  dodelitev začetne vrednosti & Pravila sintakse. & Pomen dodelitve
+                                                  začetne vrednosti\\
+  \hline
+
+\end{tabular}
+\end{table}
 
 \subsection{Programiranje v OŠ}
 \label{sec:Programiranje_v_OŠ}
@@ -331,6 +384,15 @@ Poglejmo primer spletnega portala, ki ga je izdelal avtor
   strukturo in pravilnost glede na programsko analizo.
 \end{enumerate}
 
+\subsection{Predlagane rešitve SPZUP na težave novincev}
+\label{predlagane_rešitve_na_težave_novincev}
+
+Pri samem vadenju programiranja je pomembno, da ob težavah, novinci
+dobijo čimprajšen odziv mentorja. V velikih razredih se to izkaže za
+zelo zahtevno. Z uporabo spletnih tehnologij so v pomoč prav spletni
+portali za učenje programiranja. Z njimi lahko razrešimo kar nekaj
+tegob, ki jih pestijo novince \cite{thesisAWebP}.
+
 \subsection{Prednosti spletnih portalov za učenje programiranja. }
 \label{sec:prednosti_spzup}
 
@@ -374,11 +436,182 @@ Ogrodje (ang. framework) za analizo programske kode naj bi vsebovalo:
   Formalni odzin učitelja oz. komunikacija med učiteljem in učencem.
 \end{itemize}
 
+\section{Strategije reševanja problemov}
+\label{sec:strategije_reševanja_problemov}
+
+Programiranje je preces pri katerem rešujemo probleme. Reševanje
+problemov, zato mora biti središče poučevanja računalniške
+znanosti. Reševanje problemov je zahteven mentalni proces. Če na
+spletu pobrskamo za strategije reševanja problemov lahko hitro
+ugotovimo na obstajajo različne strategije. Kot so recimo naštete na
+strani
+\href{https://en.wikipedia.org/wiki/Problem_solving#Problem-solving_strategies}{Wikipedia:Reševanje
+  problemov (\emph{ang. Problem solving})}, abstrakcija, analogija,
+brainstorming, deli in vladaj in mnoge druge.  Proces in tehnike
+reševanje problemov se uporablja v mnogih tehničnih in znanstvenih
+disciplinah \cite{guideTCS}.
+
+V nekaterih primerih učenci sami razvijejo strategijo s katero rešijo
+nek problem. Otroci si na primer sami izmislijo enostvno seštevanje in
+odštevanje, dolgo pred tem kadar se to učijo pri pouku
+matematike. Toda brez formalne podpore za unčikovito strategijo
+reševanja problemov, spodleti še tako inovativnemu učencu tudi pri
+enostavnih strategijah kot je \textbf{preizkus in napaka}. Zato je
+pomembno, da se uči strategij za reševanje problemov.
+
+\subsection{Proces reševanja problemov}
+\label{sec:proces_reševanja_problemov}
+
+Vsak osnoven proces, ki se ukvarja z raševanjem problemov, ne glede na
+znanstveno disciplino, se začne z opisom problema. Vsak problem se
+navadno zaključi z neko rešitvijo, ki je v nekaterih primerih izražena
+z \textbf{zaporedjem korakov} ali \textbf{algoritmom}. V računalništve
+algoritem zapišemo z kodo nekega programskega jezika. Zapisan
+algoritem testiramo tako, da kodo zaženemo, jo izvedemo. Preden
+pridemo od opisa problema do podane rešitve moramo prehoditi kar nekaj
+težkih korakov. Na te vmesne korake lahko gledamo kot na procese
+odkrivanja, zato lahko na reševanje problemov gledamo tudi kot na
+kreativen, umetniški proces \cite{guideTCS}.
+
+Splošno priznani koraki reševanja procesov so naslednji:
+
+\begin{enumerate}
+\item \emph{Analiza problema}. Najprej je pomembno da razuemo kaj je
+  problem in ga znamo identificirati. Če tega ne znamo, ne moremo
+  priti do nobene rešitve.
+\item \emph{Alternativnie rešitve}. Razmišljamo o alternativnih
+  rešitvah kako bi lahko rešili nek problem.
+\item \emph{Izbira pristopa}. Izberemo primeren pristop, kako rešiti problem.
+\item \emph{Razgradnja problema}. Problem razgradimo na manjše podprobleme.
+\item \emph{Razvoj algoritma}. Algoritem razvijamo po korakih, ki smo
+  jih določili v podproblemih.
+\item \emph{Pravilnost algoritma}. Preverjanje pravilnosti algoritma.
+\item \emph{Učinkovitost algoritma}. Izračunamo učinkovitost algoritma.
+\item \emph{Refleksija}. Naredimo refleksijo in analizo na pot, ki smo
+  jo naredili pri reševanju problema in naredimo zaključek z tem kar
+  lahko izboljšamo za naslednji problem, ki ga bomo reševali.
+\end{enumerate}
+
+Točen recept kako se lotiti reševanja ne obstaja. Učencem lahko le
+pokažemo nekatere metode in strategije, ki jim lahko pomagajo pri
+reševanju problemov. Poglejmo še nekatere pomembne korake podrobneje.
+
+\subsubsection{Razumevaje problema}
+\label{sec:razumevanje problema}
+
+Razumevanje problemov je prva stopnja v procesu reševanja
+problemov. Pri reševanju algoritemskih nalog najprej moramo
+prepoznati, kaj so vhodni podatki in kateri podatki naj bi bili
+izhodni. Če znamo povedati kaj bodo vhodni podatki, razumemo tudi
+bistvo samega problema.
+
+\subsubsection{Načrtovanje rešitve}
+\label{sec:načrtovanje_rešitve}
+
+Novinci se spopadajo z največjimi težavami na začetni stopnji
+načrtovanja rešitve za nek problem. V nadaljevanju so predstavljene
+tri strategije, ki jih lahko uporabimo na tem koraku reševanja
+problema.
+
+\begin{description}
+\item [Definicija spremenljivk problema:] Pri rešitvi problema
+  si pomagamo tako, da ugotovimo kaj morajo biti vhodni in kateri bojo
+  izhodni podatki. S tem razjasnimo problem. V naslednjem koraku
+  definiramo \textbf{spremenljivke}, ki so potrebne za rešitev
+  problema.
+\item [Postopno izboljševanje (\emph{ang. Stepwise
+      Refinement)}:]Po tej metodi nas najprej zanima celoten pregled
+  strukture problema in odnosi med posameznimi deli. Zatem se šele
+  poglobimo specifični in kompleksni implementaciji posameznih pod
+  problemov. Postopno izboljševanje je metodologija, ki poteka od
+  \textbf{zgoraj-navzdol}, torej od splošnega k specifičnemu. Drugačen
+  pristop je od \textbf{spodaj-navzgor}. Za oba pristopa velja da eden
+  drugega dopolnjujeta. V obeh primerih je problem razdeljen na manjše
+  pod probleme ali naloge. Glavna razlika med obema je mentalni
+  proces, ki je potreben za en ali drugi pristop.  V nadaljevanju se
+  posvetimo samo pristopu od \textbf{zgoraj-navzdol}. Rešitev, ki jo
+  poda \textbf{postopno izboljševanje} ima modularno obliko, ki jo:
+  \begin{enumerate}
+  \item jo lažje razvijamo in preverjamo,
+  \item jo lažje beremo in
+  \item nam omogoča, da uporabljamo posamezne pod rešitve tudi za
+    reševanje drugih problemov.
+  \end{enumerate}
+\item [Algoritemski vzorci:] Algoritemski vzorci združujejo
+  matematični pogled in elemente načrtovanja. Vzorec podaja načrt na
+  rešitev, s katero se srečamo mnogokrat. Algoritemski vzorci so
+  primeri elegantnih in učinkovitih rešitev problemov in predstavljajo
+  abstraktni model algoritemskega procesa, katerega lahko prilagodimo
+  in ga integriramo v rešitve drugim problemom.
+
+  Pri tem procesu lahko nastopi težava prepoznave vzorca algoritma pri
+  novincih, saj ti niso sposobni prepoznati podobnosti med posameznimi
+  algoritmi ali ne znajo prepoznati bistvo problema, njihove posamezne
+  komponente in razmerja med njimi, da bi lahko rešili nove
+  probleme. V takih primerih novinci radi ponovno izumijo že njim
+  poznane rešitve, ki bi jih lahko uporabili. Te težave navadno
+  nastanejo zaradi slabe organizacije sistematike znanja o algoritmih.
+
+  Proces reševanja problemov z algoritemskim vzorcem se navadno začne
+  z prepoznavanjem komponent, ki vodijo k rešitvi in iskanjem podobnih
+  problemov, na katere še imamo znane rešitve. Zatem prilagodimo
+  vzorec prilagodimo za rešitev problema in ga vstavimo v celotno
+  rešitev. V večini primerov je potrebno vstaviti več različnih
+  vzorcev, da dobimo neko novo rešitev.
+\end{description}
+
+\subsubsection{Preverjanje rešitve}
+\label{sec:preverjanje_rešitve}
+Ko imamo pripravljeno rešitev moramo preveriti ali je ta
+pravilna. Pogled na preverjanje pravilnosti rešitve je lahko
+teoretične in praktične narave. Razhroščevanje (\emph{ang. debugging})
+spada me vrsto aktivnosti, ki nam pomaga pri ugotavljanju pravilnosti
+rešitve. Splošno velja da proces razhroščevanja, z programom, ki nam
+pomaga razhroščevati (ang. debugger) ali brez njega, poglablja
+razumevanje računalniške znanosti. Z tem ko učenci razmišljajo, kako
+bodo preverjali ali njihov program deluje pravilno, hkrati v njih
+poteka miselni proces refleksije o tem kako so implementirali določen
+program in kako ga bojo morebiti morali spremeniti.
+
+Na nivoju do srednje šole uporabljamo praktične metode ugotavljanja
+pravilnosti programa, kot je razgroščevanje. Ko želimo znanje
+pravilnosti delovanja poglobiti se lahko lotimo tudi teoretične
+amalize.
+
+\subsubsection{Refleksija}
+\label{sec:refleksije}
+
+Refleksija je mentalni proces ali obnašanje, ki nam omogoča da neko
+delovanje analiziramo in o njem tudi premislimo. Refleksija je
+pomembno orodje v splošnem učnem procesu, prav tako spadam med
+kognitivne procese višjega reda. Z refleksijo učenec dobi priložnost,
+da stopi korak nižje in premisli o svojem razmišljanju in tako
+izboljša veščino reševanja problemov. Refleksivno razmišljanje je
+proces, ki zahteva veliko časa in vaje. Med procesom reševanja
+problemov, lahko refleksijo uporabimo na različnih stopnjah.
+
+\begin{itemize}
+\item \emph{Pred} reševanjem problemom. Ko problem preberemo, in že
+  načrtujemo rešitev, se splača uporabiti refleksijo in razmisliti o
+  tem ali smo morda že reševali podoben problem in temu primeren
+  vzorec algoritma.
+\item \emph{Med} reševanjem problema. Ko rešujemo problem refleksija
+  služi, kot pregled, kontrola in nadzor. Na primer, ko nastopijo
+  težave pri načrtovanju rešitve ali morda zaznamo težavo ali
+  napako. Temo procesu lahko pravimo \textbf{refleksija v akciji}.
+\item \emph{Po} reševanju problema. Ko že najdemo rešitev, ki deluje,
+  nam refleksija služi kot orodje z katerim pregledamo učinkovitost
+  delovanja. Pregledamo strateške odločitve, ki so bile sprejete med
+  samim načrtovanjem rešitve.
+\end{itemize}
+
+Refleksija je kreativni proces in je pomemben za učenca tako kot za
+učitelja.
 
 \section{Metode in strategije pri uporabi spletnih portalov}
 \label{sec:Metode_in_strategije_pri_učenju_programiranja}
 
-Primer strategij in metod spletnega portala za učenje jave
+Primer strategij in metod spletnega portala za učenje \textbf{Jave}.
 \cite{thesisAWebP}:
 
 \begin{itemize}
@@ -405,36 +638,161 @@ Kaj od katerih metod predstavlja v uporabi spletnega portala \ldots{}:
   -\textgreater{} problemski pristopom
 \end{itemize}
 
+
+V naslednjem poglavju sledi pregled tehnik aktivnih metod
+poučevanja. V poglavju sledi obravnava didaktičnih pripomočkov, oblik
+pouka, in projektno delo \cite{guideTCS}.
+\subsection{Didaktični pripomočki}
+\label{sec:didaktični_pripomočki}
+
+Med didaktičnimi pripomočki najdemo številna orodja:
+
+\begin{itemize}
+\item \textbf{pedagoške igre},
+\item računalništvo brez računalništva,
+\item \textbf{bogate naloge},
+\item miselni vzorci,
+\item klasifikacija,
+\item metafore.
+\end{itemize}
+
+V povezavi z spletnimi portali za učenje programiranja nas bodo
+zanimale le nekatera.
+
+\subsubsection{Pedagoške igre}
+\label{sec:pedagoške_igre}
+
+\subsubsection{Bogate naloge}
+\label{sec:bogate_naloge}
+
+\subsection{Različne oblike pouka}
+\label{sec:različne_oblike_pouka}
+
+Računalniško znanost lahko poučujemo tako, da jo predavamo, vendar to
+ni v skladu z naprednimi nazori poučevanja aktivnega učenja, ki smo ga
+do sedaj spoznali. Za uspešno in koristno učenje se moramo temu
+pristopu čim bolj izogniti. To velja predvsem za izobraževanje na
+nivoju \textbf{OŠ} in seveda tudi \textbf{SŠ}. Kot smo že poudarili v
+poglavju? je pomemben aktivni pristop v učnem procesu.
+
+Pomembno je tudi v kakšni obliki dela poteka pouk. V nasprotju z
+frontalnim delom, lahko pouk organiziramo na naslednje načine.
+
+\begin{description}
+\item[Samostojno delo:] Prvi način je morda najenostavnejši
+  za organizacijo dela v učilnici in omogoča aktivno učenje za vse
+  učence. Taka oblika organizacije je primerna predvsem, ko učitelj
+  želi preveriti ali vsi učenci sledijo in znajo uporabljati določeno
+  znanje in veščine, kot je na primer uporaba integriranega razvojnega
+  okolja (\emph{ang. Integrated Development Environment
+    (\textbf{IDE})}) ali sledenje določenemu algoritmu.
+\item[Delo v parih:] Razred razdelimo v pare, ti rešujejo
+  programerske ali ne programerske naloge. V primeru programerskih
+  nalog, učenca, ki sta v paru rešujeta programersko nalogo tako da je
+  eden v vlogi \textbf{voznika} in drugi v vlogi
+  \textbf{navigatorja}. Prvi, voznik ima v nadzoru tipkovnico in
+  miško. Drugi sledi razvojnemu procesu in analizira napredek skupaj z
+  voznikom. Oba seveda zamenjujeta vloge. Programiranje v parih vodi v
+  proces reševanja problemov na dveh nivojih, en nivo predstavlja
+  nalogo kodiranja, drugi predstavlja uporabo strategij pri reševanju
+  problema. Ko so naloge niso programerske in jih ne izvajamo na
+  računalniku, zgubimo nalogo voznika. Kljub temu lahko izvajamo tako
+  obliko pouka, saj lahko sklepamo, da je delo v parih, pri reševanju
+  problemov, primernejše kot v večjih skupinah, kjer obstaja večja
+  možnost, da nekateri učenci dominirajo v skupini in teko druge
+  učence prikrajšajo za sodelovanje.
+\item[Skupinsko delo] Druga oblika organizacije je delo v
+  skupi ali timu in je primerna v naslednjih primerih:
+  \begin{enumerate}[a.]
+  \item ko sta potrebna več kot dva učenca za opravilo neke naloge,
+  \item Ko učitelj želi izkoristiti raznolikost v skupini,
+  \item ko je razred razmeroma velik in si učitelj želi olajšati delo
+    tako da učence razdeli v manjše skupine,
+  \item ko želi da so vključeni vsi učenci, a le eden iz posamezne
+    skupine naj bi predstavljal narejeno delo.
+  \end{enumerate}
+\item[Skupinsko delo - sestavljanka (\emph{ang. Jigsaw Classroom})] Po
+  navodilih spletne strani \href{https://www.jigsaw.org/}{razredne
+    sestavljanke (\emph{ang. Jigsaw classroom})} je oblika
+  organizacije na naslednji način.
+  \begin{enumerate}
+  \item Učence razdelimo na skupine 5 - 6. Vsak od njih ima nalogo, da
+    predela posamezno nalogo, poglavje, ki je razdeljeno na toliko pod
+    poglavij ko je učencev v skupini. Vsak od njih je odgovoren, da se
+    nauči posamezno podpoglavje in to znanje posreduje naprej drugim
+    učencem.
+  \item Preden učenci preidejo k poročanju posameznega podpoglavja, se
+    sestanejo z učenci drugih skupin, ki imajo isto nalogo oz
+    podpoglavje. S tem zagotovimo večjo točnost naučenega.
+  \item Učenci se vrnejo nazaj v svoje prvotne heterogene skupine, in
+    poučijo svoje sošolce o tem kaj so se naučili.
+  \end{enumerate}
+  Učitelj se odloči kaj po končni izdelek, ali bo to napisano kratko
+  poročilo, ali plakat, ali kak drugi pisni izdelek, delo se lahko
+  zaključi tudi brez končnega izdelka.
+
+  Kot je razvidno z organizacije dela \textbf{sestavljanke} so
+  prednosti ogromne, tiste ki omogočajo kognitivni razvoj in tiste, ki
+  socialnega. Učenje v tej obliki vzpodbuja učenje, poslušanje,
+  sodelovanje in deljenje znanja.
+\end{description}
+
+\subsection{Projektno delo}
+\label{sec:projektno_delo}
+
+Preglejmo najprej nekatere lastnosti, ki jih prinaša projektno
+delo. To lahko poteka tako, da učenci delajo samostojno ali v
+skupini. Učitelj je tisti, ki vodi proces projektnega dela. Učenec je
+pri projektnem delu bistveni člen in mu tako omogoča aktivno učenje.
+
 \subsection{Učne strategije}
 \label{sec:učne_strategije}
 
-\subsubsection{Model aktivnega učenja}
-\label{sec:model_aktivnega_učenja}
+\subsubsection{Aktivno učenje in model aktivnega učenja}
+\label{sec:aktivno_učenje_in_model_aktivnega_učenja}
 
-Pri \textbf{aktivnem učenju} je to, da učenci z lastno aktivnostjo
-ugotovijo, sami za sebe, kako nekaj deluje. Sami si morajo izmisliti
-primere, preiskusiti lastne veščine in reševati neloge, ki so jih že
-ali jih še podo spoznali. Učenje je aktivno usvajanje, je gradnja idej
-in znanja. Za učenje mora biti posameznik aktivno vključen v gradnjo
-svojih lastnih mentalnih modelov.
+Vsak pouk računalništva mora biti zgrajen kot model in bi moral
+upoštevati naslednja načela:
+\begin{itemize}
+\item Vzpodbujati mora študente z pozitivno naravnanim poukum in
+   omogočati mora okolje kjer študent najde pomoč.
+ \item Pouk računalništva je grajen na konstruktivnih metodah poučevanja
+   in aktivnem učenju.
+\end{itemize}
 
-Model aktivnega učenja je sestavljen s štirih korakov.
+\textbf{Konstruktivizem} je kognitivna teorija, ki preučuje naravo
+procesov učenja. Po tem principu naj bi učenci konstruirali novo
+znanje na osnovi preurejanja in izpopolnjevanja že obstoječega
+znanja. Znanje se gradi na obstoječih mentalnih strukturah in na
+odzivu, ki ga dobi učenec iz učnega okolja. Mentalne strukture so
+grajene korak za korakom, ena za drugo, seveda s to metodo lahko pride
+tudi do sestopanja ali slepih koncev. Proces je povezan z Piagetovim
+mehanizmom asimilacije \cite{guideTCS}.
 
-\begin{enumerate}
-\item \textbf{Sprožilec} Je predstavljena naloga kot iziv za uvod v novo
+Pri \textbf{aktivnem učenju} je najpomembnejše to, da učenci z lastno
+aktivnostjo ugotovijo, sami za sebe kako nekaj deluje. Sami si morajo
+izmisliti primere, preiskusiti lastne veščine in reševati neloge, ki
+so jih že ali jih še podo spoznali. Učenje je aktivno usvajanje, je
+gradnja idej in znanja. Za učenje mora biti posameznik aktivno
+vključen v gradnjo svojih lastnih mentalnih modelov.
+
+Model aktivnega učenja je sestavljen s štirih korakov \cite{guideTCS}.
+
+\begin{itemize}
+\item \textbf{Sprožilec} Je je naloga, ki predstavlja  iziv za uvod v novo
 tematiko.  //Gerlič -> Motivacija.
-\item \textbf{Aktivnost} Študenti izvajajo aktivnost, ki jim je bila
+\item \textbf{aktivnost} Študenti izvajajo aktivnost, ki jim je bila
 predstavljena v sprožilcu. Ta kora je lahko kratek ali lahko
 zavzame večju del učne ure. To je odviso od vrste sprožilca in
 izobraževalnih ciljev.
-\item \textbf{Diskusija} sledi po koncu aktivnosti, kjer se zbere zeloten
-razred, ne glede na obliko dela. V temo koraku študenti izpopolnijo
+\item \textbf{diskusija} sledi po koncu aktivnosti, kjer se zbere zeloten
+razred, neglede na obliko dela. V temo koraku študenti izpopolnijo
 koncepte in ideje, kod del konstruktivnega učnega procesa.
-\item \textbf{Povzetek} je lahko izračen v različnih oblikah, kot so
+\item \textbf{povzetek} je lahko izračen v različnih oblikah, kot so
 zaogrožene definicije, lahko so miselni vzorci ali povezav med
 temami, ki so jih obravnavali študenti in med drugimi temami, ki se
 navezujejo nanje.
-\end{enumerate}
+\end{itemize}
 
 Ko se ta model izkaže za primernega, ga lahko uporabimo v številnih
 učnih urah v različnih variacijah.
@@ -490,15 +848,5 @@ kriterije,
 \item jezik spletne strani.
 \end{itemize}
 
-
-
-\section{Možni načini uporabe spletnih portalov pri puku}
+\section{Možni načini uporabe spletnih portalov pri pouku}
 \label{sec:načini_uporabe_sp}
-
-
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "diploma"
-%%% End:
