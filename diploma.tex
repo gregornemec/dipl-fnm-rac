@@ -37,6 +37,7 @@
 \usepackage{setspace}
 
 %%% Custom headers/footers (fancyhdr package)
+%%Fancy boxes
 
 \usepackage{fancyhdr}
 
@@ -55,13 +56,26 @@
 \renewcommand{\headrulewidth}{0pt}			% Remove header underlines
 \renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
 
-\usepackage[pdftex,dvipsnames]{xcolor}
+\usepackage[pdftex,dvipsnames,table,x11names,rgb,html]{xcolor}
+
+%%Barvne škatle
+\usepackage{tcolorbox}
+\usepackage{wrapfig}
+
+%%%Nastavitve barv
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+%%%Nastavitve za barvanje kode!
+\usepackage{solarized-light}
+
+\usepackage{listings}
+
 \usepackage{xargs}  %Uporabei več kot en argument v novem ukazu
 %Paket za dodajanje todo oblačkov!
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 %\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \newcommandx{\TODO}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-%\newcommand{\inlcomment}{\info[inline]{1=}}
+\newcommand{\inlcomment}{\info[inline]{1=}}
 %%% Equation and float numbering
 %\numberwithin{equation}{section}		% Equationnumbering: section.eq#
 %\numberwithin{figure}{section}			% Figurenumbering: section.fig#
@@ -91,6 +105,9 @@
 %%% Maketitle metadata
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
 %%% Begin document
+
+%%%
+
 
 %Spremenljivke
 

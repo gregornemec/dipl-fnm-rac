@@ -485,13 +485,112 @@ napisan program, ga prevede \textbf{prevajalnik
 \subsubsection{Algoritem}
 \label{sec:algoritem}
 
+Z besedo algoritem ponazarjamo postopek, ki je zgrajen z posameznih
+operacije in se izvajajo po posameznh korakih. Algoritem daje rešitev
+za izračune, procesiranje podatkov, avtomatizacijo postopkov.
+Ime besed \emph{``algoritem''} prihaja z imena \textbf{Al-Khwārizmī},
+Perzijskega matematika, astronoma, geografa in učenjaka \cite{wiki:algorithem}.
 
+Pri pregedu učnih načrtov v poglavju
+\ref{sec:neobvezno_izbirni_predmet_rac} smo lahko zasledili cilje kot
+so:
 
+\begin{itemize}
+\tightlist
+\item \textbf{znajo vsakdanji problem opisati kot zaporedje korakov},
+\item \textbf{znajo z algoritmom predstaviti preprosto opravilo},
+\item \textbf{algoritem predstavijo simbolno (z diagramom poteka) ali s
+  pomočjo navodil v preprostem jeziku}.
+\end{itemize}
+
+% Poglejmo nekaj primerov, kako lahko s pomočjo spletnih portalov za
+% učenje programiranja zadostimo tem ciljem in kaktere informacije
+% najdemo. Na strani \href{https://code.org}{code.org}. Podroben opis
+% strani je v poglavju x.x. Algoritmov se učijo že najmlajši udeleženci
+% zato si pri lažjem raumevanju pojma algoritem lahko pomagamo, z
+% pristopom \textbf{računalništva brez računalnika}. Spodaj prikazujemo
+% dva primera.
+
+Prikazali bomo več različnih predstavitev algoritma, najprej bomo
+rešitev zapisali v pesedilni obliki, zatem bomo rešitev podali z
+diagramom poteka, na koncu bomo rešitev podali še z programskim
+jezikom Scratch in Python.  Za primer bomo prikazali primer algoritma,
+ki reši naslednjo nalogo.
+
+%Možnost programskih primerov v takem slogu.
+
+%Dodaj diagram poteka!
+
+\begin{tcolorbox}[
+colframe=sbase2!100,
+colback=sbase3!100,
+coltitle=sbase00!100!black,
+colupper=sbase01!100!black,
+fonttitle=\bfseries,
+adjusted title=\textbf{Algoritem - Najdi največje število}]
+Algoritem med podanimi števili poišče največje število.
+
+Postopek zapisan v \textbf{besedilu}:
+\begin{enumerate}
+\tightlist
+\item Zapišemo si začetno število, naj bo $0$.
+\item Števila v seznamu preglejujemo po vrsti.
+\item Vsakič, ko najdemo večje število, ko je naše začasno število,
+\item To začasno število prečrtamo in napišemo tisto z seznamoa, ki je
+  večje.
+\item Postopek ponavljamo, dokler ne pridemo na konec seznama.
+\end{enumerate}
+
+% Tu bi bilo dobro, da bi lahko prikazal tekst in sliko v eni vrsti.
+
+Podprogram v \textbf{Scratchu}:
+
+%\begin{figure}
+    \includegraphics [width=0.6\linewidth, keepaspectratio =
+    1] {./images/scratchImg/01-Scr_Alg-NajvecjeSt-img_trs.png}
+    % \caption{Test}
+    % \label{fig:scr:01-Alg_najdiNajvecje}
+%\end {figure}
+
+Podprogram v \textbf{Pythonu}:
+
+\begin{lstlisting}[language=Python]
+def najdiNajvecjeStevilo(seznam):
+    """Funkcija poisce najvecje stevilo v seznamu."""
+    i = 0
+    najvecje_stevilo = 0
+    for i in range(len(seznam)):
+        if seznam[i] > najvecje_stevilo:
+            najvecje_stevilo = seznam[i]
+    return najvecje_stevilo
+\end{lstlisting}
+\end{tcolorbox}
 
 
 \subsubsection{Programiranje in kodiranje}
 \label{sec:programiranje_kodiranje}
 
+Izraz programiranja smo že spoznali. Veliko krat slišimo tudi izraz,
+\textbf{``kodiranje'' (\emph{ang. coding})}. Povedali bi lahko da
+izraz pomeni, pisanje programske kode, konček izdelek, tisto kar na
+koncu damo \textbf{prevajalniku}, kar je \textbf{izvorna koda}, da
+prevede v \textbf{strojno kod}o, katero lahko potem zaganjamo.
+
+Za vsakim programiranjem stoji seveda nek programer, lahko bi rekli,
+da je za vsakim kodiranjem nekdo, ki mu pravimo
+\textbf{koder}. Programer in koder stav veliko krat, dana v isti koš,
+vendar si to čisto ne zaslužita, saj je programer, nekdo ki načrtuje
+rešitve, na različne načine in z razčličnimi orodji preden sploh
+zapiše kaj programske kode. Koder po drugi strani je tista oseba, ki
+se dobro spozna na programske jezike vendar, dela veliko krat po
+načrtu programera, je tisti ki na kocu zapiše rešitve in je pri tem
+zelo unčikovita. Čeprav se ta dva poklica zelo povezana in so meje med
+njima tudi veliko krat zabrisane sploh, če je programer in koder ena
+in ista oseba \cite{web:coder}.
+
+Pri samem poučevanju računalništva, lahko menimo, da je v prvi vrsti
+pomembno to, da se učimo strategije reševanja problemov, torej kako
+poučevati, da bo čim več učencev postalo dobrih programerjev.
 
 \subsection{Programske paradigme}
 \label{sec:programske_paradigme}
@@ -504,10 +603,6 @@ mentalne procese, strategije reševanja problemov, povezave med
 različnimi paradigmami, programske jezike, stil programiranja in še
 več (Wikipedia: Paradigma) \cite{guideTCS}.
 
-Povemo lahko, da je programiranja, hevristična paradigma za algoritme
-ki rešujejo probleme. Programski jezik je način za izražanje
-programske paradigme.
-
 %//Glavna definicija.
 Programske paradigme so hevristike, ki se uporabljajo za reševanje
 problemov. Programska paradigma analizira problem, čez specifičen
@@ -517,13 +612,13 @@ na manjše dele med katerimi definira razmerja.
 Programske paradigme so na primer proceduralno, objektno orientirano,
 funkcijsko, logično in istočasno programiranje.
 
-V nadaljevanju bomo spoznali značilnosti dveh programskih paradigem.
-
-\subsubsection{Proceduralno programiranje}
-\label{sec:proceduralno_programiranje}
+V nadaljevanju bomo spoznali značilnosti programske paradigme
+objektnega programiranja, saj je ta v zadnjih letih naj bolj
+popularna.
 
 \subsubsection{Objektno orientirano programiranje}
 \label{sec:objektno_orijentirano_programiranje}
+
 
 \subsection{Programski jeziki}
 \label{sec:programski_jeziki}
@@ -559,7 +654,7 @@ primer spremenljivke.
   p{0.30\linewidth-2\tabcolsep} |
   p{0.40\linewidth-2\tabcolsep} | }
   \hline
-  \rowcolor{gray!50}
+  %\rowcolor{gray!50}
   & \textbf{togi orisi} & \textbf{mehki orisi}\\
   \hline
   ime spremenljivke & Pravilo sintakse. & Potreba po imenu
@@ -579,7 +674,6 @@ primer spremenljivke.
 
 \end{tabular}
 \end{table}
-
 
 \section{Spletni portali za učenje programiranja}
 \label{sec:SPUP}
@@ -1411,3 +1505,8 @@ kriterije,
 
 \section{Možni načini uporabe spletnih portalov pri pouku}
 \label{sec:načini_uporabe_sp},
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "diploma"
+%%% End:
