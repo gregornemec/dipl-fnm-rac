@@ -619,9 +619,142 @@ popularna.
 \subsubsection{Objektno orientirano programiranje}
 \label{sec:objektno_orijentirano_programiranje}
 
+%V objektno orientiranem \textbf{OO} pristopu programer raz
+
+V objetno orientirano \textbf{OO} programiranje je način kako
+programerji razmišljajo o svojem delu. Princip OO model realnosti
+sveta predstavlja v \textbf{razredih \emph{ang. class}}. Z takim
+načino zapisa programske kode je ramišljanje o programu dosti bolj
+naravno \cite{shaums}.
+
+Objekt je predstavnik različnih stvari, ki jih želimo predstavljati v
+programskem razredu. Te stvari so lahko kar koli, od realnih objektov
+in vse do konceptov. Podajmo primer objekta mačke. Mačka ima številne
+karakteristike, kot so barva, ime, teža \dots, tem lasnostim pravimo
+da so lasnosti objekta. Mačka je živo bitje, zato njeno početnje, kot
+je mjavkanje, spanje, igranje \dots, dejanjem mače pravimo, da so
+metode objekta. Pri objetih lahko uporabimo analogijo in objekte
+poimenujemo z samostalniki, metode so glagorli in vrednosti lasnosti
+objekta so pridevniki. V nadaljevanju si bomo ogledali nekatere
+značilnosti, ki definirajo ne programski jezi kot OO \cite{OO-JS}.
+
+\begin{description}
+\item[Razred (\emph{ang. Class}):] V resničnem življenju lahko objekte
+  združujemo po nekih določenih kriterijih. Orel in sinička sta oba
+  ptiča, zato jih lahko damo skupaj v razred katerega poimenujemo
+  Ptiči. Razredi so načrti ali recepti za objekte, tako lahko
+  ustvarimo več objektov iz istega razreda, saj je razred le shma.
+\item [Enkapsulacij (\emph{ang. Encapsulation)}:] je koncept ,ki
+  predstavlja, da so podatki, torej \emph{lasnosti} objektov in
+  opravila, ki jih lahko opravljajo ali \emph{metode} objektov,
+  združeni.
+\item [Združevanje (\emph{ang. Aggregation}):] pomeni, da lahko več
+  objektov združimo v en objet. To predstavlja močno orodje pri
+  razčljenjevanju problemov na manjše pod probleme.
+\item [Dedovanje (\emph{ang. Inheritance}):] je eleganten način kako
+  porabimo eno kodo več krat. Podajmo primer, imamo splošen razred
+  Oseba, ta ima lasnosti kot je ime, datum rojstva in ima napisane
+  metode, ki prestavljajo funkcionalnost kot je, da Oseba lahko
+  govori, hodi, je, spi. Zatem bi želeli bolj specifičen razred ko je
+  Programer. Lahko bi vso kodo ponovno napisali in ji dodali
+  specifično za programerja. Dedovanje omogoča, da povemo da Programer
+  deduje od razreda Osebe in si tako prihranimo velik del dela.
+\item [Polimorfizem (\emph{ang. polymorphisem}):] je način kako lahko
+  isto ime metode uporablja več različnih razredov in posledično
+  objektov neglede nato, da je najverjetneje koda v njem
+  različna.
+\end{description}
+
+Programsko paradigmo OO programiranja smo povzeli na kratko, da bi
+lažje razumeli zakaj je tako popularna. V nadaljevanju bomo spoznali,
+da je večina programskih jezikov, ki se uporabljajo dan danes OO ali
+vsaj vsebijejo nekaj lasnosti OO programskih jezikov.
 
 \subsection{Programski jeziki}
 \label{sec:programski_jeziki}
+
+V tem poglavju bomo povzeli osnovne značilnosti posameznij programskih
+jezikov.  Zanimali nas bodo predvsem programski jeziki, ki so trenutno
+najbolj v uporabli. Če na spletu v spletnem iskalniku podamo zahtevo
+po najpopularnejšuh programskih jezik, dobimo podobne rezultate
+večih spletnih strani\footnote{Pridobljeno 27.04.2016 iz,
+  \url{http://www.tiobe.com/tiobe_index}.}  \footnote{Pridobljeno
+  27.04.2016 iz, \url{http://githut.info/}.}\footnote{Pridobljeno
+  27.04.2016 iz, \url{http://pypl.github.io/PYPL.html}.}  in sicer: \textbf{JAVA,
+  C, C++, Python, C\#} v top 10 za nas pomembne majdemo še
+\textbf{Java Script}. % in \textbf{Ruby}.
+
+Programski jeziki v izobraževanju so se skozi zgodovino menjavali,
+tako kot se je rezvijala računalniška znanost, kar smo že povzeli v
+poglavju \ref{sec:zgodovina_programskih_jezikov}. Zanima nas, kateri so
+prograsmki jeziki, ki so najbolj primerni za uporabo učenja
+programiranja.
+
+Večina od zgoraj naštetih programskih jezikov je \textbf{OO} razen
+izjeme \textbf{C}-ja, ki je predhodnik \textbf{C++}.
+
+%Podajmo še razliko med programsimi jeziki, ki so za večnamesko uporabo
+%in tistimi, ki jim pravimo, da so skirptni.
+
+Za nas bodo z izobraževalnega vidika zanimivi predvsme tisti, ki se
+uporabljajo pri nas.
+
+\subsubsection{Java}
+\label{sec:pj:JAVA}
+
+Java je več namenski programski jezik, njegova osnov so \emph{razredi}
+in je OO. Njegova glavna prednost je, da napisano kodo lahko zaganjamo
+ne glede na platformo na kateri teče, torej so napisani programi
+neodvisni od operacijskega sistema, ki ga poganja računalnik. Zato je
+za vsako platformo prilagojen \textbf{virtualni stroj za Javo
+  \emph{(ang Java Virtual Machin (JVM)}}, ki prevedeno kodo
+poganja. Sintaksa programskega jezika je zelo podobna
+\textbf{C++}. Popularnost programskega jezika je še izboljšal zaradi
+operacijskega sistem za tablice in telefone \textbf{Android}, ki prav
+tako teče na različici (JVM) oz so programi napisani v Javi.
+
+V izobraževanju je Java postala zelo priljubljena, prav zaradi
+zmožnosti, poganjanja programov na različnih platformah. Uporablja se
+na primarnem področju izobraževanja, predvsem na srednjem in visokem
+šolskem področju. V sekundarnem področju izobraževanj se je uporabila
+predvsem za pisanje programske opreme, ki dopolnjuje izobraževanje,
+kot so fizikalne simulacije (\emph{fizleti}) in podobno. Eden od
+razlogov, da se je Java na tem področju dobro uveljavila je tudi ta,
+da omogoča zagon aplikacije s spletnega brskalnika, vendar je za to
+potrebna instalacija posebnega vtičnika, ki to omogoča.
+
+\begin{tcolorbox}[
+colframe=sbase2!100,
+colback=sbase3!100,
+coltitle=sbase00!100!black,
+colupper=sbase01!100!black,
+fonttitle=\bfseries,
+adjusted title=\textbf{Primer programa napisanega v Javi}]
+
+
+\begin{lstlisting}[
+%label=prog:ex:Java
+%caption=Primer Programa napisanega v Javi
+language=Java
+]
+class First {
+  public static void main(String[] arguments) {
+    System.out.println("Hello world!");
+  }
+}
+
+\end{lstlisting}
+\end{tcolorbox}
+
+\subsubsection{C++}
+\label{sec:pj_c++}
+
+\subsubsection{Java Script}
+\label{sec:pj_JS}
+
+\subsubsection{Python}
+\label{sec:pj_python}
+
 
 \subsection{Osnovni koncepti programiranja}
 \label{sec:Osnvni koncepti_programiranja}
@@ -674,6 +807,16 @@ primer spremenljivke.
 
 \end{tabular}
 \end{table}
+
+\subsection{Spremenljive}
+\label{sec:spremenljivke}
+
+
+
+
+
+
+
 
 \section{Spletni portali za učenje programiranja}
 \label{sec:SPUP}
