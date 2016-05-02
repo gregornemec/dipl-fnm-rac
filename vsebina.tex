@@ -521,13 +521,7 @@ ki reši naslednjo nalogo.
 
 %Dodaj diagram poteka!
 
-\begin{tcolorbox}[
-colframe=sbase2!100,
-colback=sbase3!100,
-coltitle=sbase00!100!black,
-colupper=sbase01!100!black,
-fonttitle=\bfseries,
-adjusted title=\textbf{Algoritem - Najdi največje število}]
+\begin{examplebox}[label={prog:al01}]{Algoritem - Najdi največje število}
 Algoritem med podanimi števili poišče največje število.
 
 Postopek zapisan v \textbf{besedilu}:
@@ -541,8 +535,8 @@ Postopek zapisan v \textbf{besedilu}:
 \item Postopek ponavljamo, dokler ne pridemo na konec seznama.
 \end{enumerate}
 
-% Tu bi bilo dobro, da bi lahko prikazal tekst in sliko v eni vrsti.
 
+% Tu bi bilo dobro, da bi lahko prikazal tekst in sliko v eni vrsti.
 Podprogram v \textbf{Scratchu}:
 
 %\begin{figure}
@@ -564,7 +558,8 @@ def najdiNajvecjeStevilo(seznam):
             najvecje_stevilo = seznam[i]
     return najvecje_stevilo
 \end{lstlisting}
-\end{tcolorbox}
+\end{examplebox}
+
 
 
 \subsubsection{Programiranje in kodiranje}
@@ -674,8 +669,7 @@ vsaj vsebijejo nekaj lasnosti OO programskih jezikov.
 \label{sec:programski_jeziki}
 
 V tem poglavju bomo povzeli osnovne značilnosti posameznij programskih
-jezikov.  Zanimali nas bodo predvsem programski jeziki, ki so trenutno
-najbolj v uporabli. Če na spletu v spletnem iskalniku podamo zahtevo
+jezikov.  Če na spletu v spletnem iskalniku podamo zahtevo
 po najpopularnejšuh programskih jezik, dobimo podobne rezultate
 večih spletnih strani\footnote{Pridobljeno 27.04.2016 iz,
   \url{http://www.tiobe.com/tiobe_index}.}  \footnote{Pridobljeno
@@ -688,13 +682,22 @@ Programski jeziki v izobraževanju so se skozi zgodovino menjavali,
 tako kot se je rezvijala računalniška znanost, kar smo že povzeli v
 poglavju \ref{sec:zgodovina_programskih_jezikov}. Zanima nas, kateri so
 prograsmki jeziki, ki so najbolj primerni za uporabo učenja
-programiranja.
+programiranja in se uporabljajo danes.
+
+Vsak programski jezik bomo z kratim primerom tudi predstavili z
+primerom programske, kode tako bomo dobili lažjo predstavo kakšna je
+razlika v sintaksi.
 
 Večina od zgoraj naštetih programskih jezikov je \textbf{OO} razen
 izjeme \textbf{C}-ja, ki je predhodnik \textbf{C++}.
 
 %Podajmo še razliko med programsimi jeziki, ki so za večnamesko uporabo
-%in tistimi, ki jim pravimo, da so skirptni.
+%in tistimi, ki jim pravimo, da imajo ožjo uporabnost.
+
+%Razlika med prevajanimi in tolmačenimi prog. jeziki
+%Uredi ker je zmazek
+
+%% Napiši še kaj o generacijah programskih jezikov.
 
 Za nas bodo z izobraževalnega vidika zanimivi predvsme tisti, ki se
 uporabljajo pri nas.
@@ -711,7 +714,8 @@ za vsako platformo prilagojen \textbf{virtualni stroj za Javo
 poganja. Sintaksa programskega jezika je zelo podobna
 \textbf{C++}. Popularnost programskega jezika je še izboljšal zaradi
 operacijskega sistem za tablice in telefone \textbf{Android}, ki prav
-tako teče na različici (JVM) oz so programi napisani v Javi.
+tako teče na različici (JVM) oz so programi napisani v Javi
+\cite{wiki:java}.
 
 V izobraževanju je Java postala zelo priljubljena, prav zaradi
 zmožnosti, poganjanja programov na različnih platformah. Uporablja se
@@ -721,53 +725,138 @@ predvsem za pisanje programske opreme, ki dopolnjuje izobraževanje,
 kot so fizikalne simulacije (\emph{fizleti}) in podobno. Eden od
 razlogov, da se je Java na tem področju dobro uveljavila je tudi ta,
 da omogoča zagon aplikacije s spletnega brskalnika, vendar je za to
-potrebna instalacija posebnega vtičnika, ki to omogoča.
-
-\begin{tcolorbox}[
-colframe=sbase2!100,
-colback=sbase3!100,
-coltitle=sbase00!100!black,
-colupper=sbase01!100!black,
-fonttitle=\bfseries,
-adjusted title=\textbf{Primer programa napisanega v Javi}]
-
-
-\begin{lstlisting}[
-%label=prog:ex:Java
-%caption=Primer Programa napisanega v Javi
-language=Java
-]
+potrebna instalacija posebnega vtičnika, ki to omogoča. Primer
+\ref{prog:java01} prikazuje sintakso \emph{"Dobrodošel svet"}
+napisanega v Javi.
+%Ali moram podati referenco za te Hello world programe.
+%http://www.programmingsimplified.com/java-source-codes
+\begin{examplebox}[label={prog:java01}]{Program napisan v javi}
+\begin{lstlisting}[language=Java]
 class First {
-  public static void main(String[] arguments) {
-    System.out.println("Hello world!");
+   public static void main(String[] arguments) {
+     System.out.println("Dobrodosel svet!");
   }
 }
-
 \end{lstlisting}
-\end{tcolorbox}
+\end{examplebox}
+
 
 \subsubsection{C++}
 \label{sec:pj_c++}
 
+C++ je vse namenski programski jezik, ki je OO in je bil zasnovan kot
+sistemski programski jezik. Večina operacijskih sistemov je danes
+napisana v kodi C++ in predhodnika C. Kodo programskega mora prevesti
+prevajalnik preden jo lahko zaganjamo, za vsako platformo moramo
+prevajati posebej.  C++ velja za najhitrejši programski jezik, z njim
+lahko opravljamo tako naloge, kot je neposreden nadzor nad
+polnilnikom, kot tudi vse višje funkcije, ki jih omogoča. Zato velja
+za enega težje učljivih programskih jezikov. Programiranje v C++ se
+uči predvsem na višjem in univerzitetnem izobraževalnem nivoju \cite{wiki:cpp}.
+
+%https://en.wikibooks.org/wiki/C%2B%2B_Programming/Examples/Hello_world
+\begin{examplebox}[label={prog:cpp01}]{Program napisan v C++}
+\begin{lstlisting}[language=C++]
+// 'Hello World!' program
+#include <iostream>
+
+int main()
+{
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}
+\end{lstlisting}
+\end{examplebox}
+
 \subsubsection{Java Script}
 \label{sec:pj_JS}
+
+\textbf{Java Script (JS)} se je razvil z potrebe po bogatejših in dinamičnih
+spletnih straneh. Začetek spleta so predstavljali statični dokumenti,
+ki so bile povezane z hiper povezavami. Skirptni jezik z imenom Java
+script se je prvič pojavil z spletnim brskalnikom \emph{Netscape
+  2.0}. Takrat je bilo možno vstavljanje kratkih odsekov kode, ki so
+spletne strani naredile dinamične. Težnja po standardizaciji
+skriptnega jezika se je pojavila ko se je na trgu pojavil
+\emph{Internet explorer 3.0}, saj je ta imel svojo različico sriptnega
+jezika \emph{JScript}. Sedaj se standardni jezik imenuje \textbf{ECMA
+  Script} oz. točneje \textbf{ECMA-262}, ki opisuje glavne dele
+programskega jezika JavaScript brez specifikacij, spletnega
+brskalnika \cite{OO-JS}.
+
+Če smo v prejšnjih poglavjih govorili, da sta bila \textbf{Java} in
+\textbf{C++} večnamenska jezika, je JS bil eden tistih, ki so tekli
+znotraj vgrajenega gostiteljskega okolja, kot je spletni
+brskalnik. Danes imamo tudi okolja, ki omogočajo, da JS teče na
+strežnih, na namizju in mobilnih napravah. Torej, kljub zgoraj
+omenjeni omejitvi, postaja prav tako večnamenski skriptni programski
+jezik. V spodnjem primeru \ref{prog:js01} imamo primer programa
+\emph{``Dobrodošel svet!''}, z \textbf{HTML} ogrodjem. Tako programska
+kodo odpremo v spletnem brskalniku. Del skriptnega jezika se začne z
+značko \texttt{<script type="text/javascript"> JS koda
+  </script>}. Povejmo še to, da se koda programskega jezika ne
+prevaja, temveč jo poganja \textbf{tolmač}.
+
+
+%https://en.wikibooks.org/wiki/JavaScript/First_Program
+\begin{examplebox}[label={prog:js01}]{Program napisan v JavaScriptu +
+    HTML ogrodje}
+\begin{lstlisting}[language=Html]
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Some Page</title>
+    <script type="text/javascript">
+      alert("Hello World!");
+    </script>
+  </head>
+  <body>
+    <p>The content of the web page.</p>
+  </body>
+</html>
+\end{lstlisting}
+\end{examplebox}
 
 \subsubsection{Python}
 \label{sec:pj_python}
 
+\textbf{Python} je zelo pogosto uporabljen večnamenski programski
+jezik. Njegovo kodo podobno kot JS poganja tolmač. Zasnovan je tako,
+da je koda čim bolj berljiva in njegova sintaksa omogoča, da
+programske koncepte zapišemo v čim manj vrsticah, kakor bi jih lahko v
+Javi ali C++. Če so posamezni odseki ali bloki programske kode pri
+Javi in C++ označeni z zavitimi oklepaji (``{}''), jih v Pythonu
+označimo z tabulatorskim zamikom. V Pythonu lahko uresničimo več
+programskih paradigem, kot je OO ali proceduralno
+programiranje. Omogočen je dinamičen tip spremenljivk, ima urejeno
+avtomatsko upravljanje z pomnilnikom in ima veliko standardno
+knjižnico \cite{wiki:python}.
+
+%Kje to piše, da je priporočljiv jezik v SŠ
+Pyon se veliko uporablja tudi v izobraževalne namen. Pri nas se
+priporoča za začetke učenja programskega jezika na srednjem šolskem
+izobraževalnem nivoju. Zaredi tega, ga bomo v diplomskem delu
+uporabljali, ko glavni demonstracijski programski jezik.
+
+%https://en.wikibooks.org/wiki/JavaScript/First_Program
+\begin{examplebox}[label={prog:py01}]{Program napisan v Pythonu
+    HTML ogrodje}
+\begin{lstlisting}[language=Python]
+print (``Hello world!''')
+\end{lstlisting}
+\end{examplebox}
 
 \subsection{Osnovni koncepti programiranja}
 \label{sec:Osnvni koncepti_programiranja}
 
 % Predstavljeni koncepti na primerih eden OŠ Scratch drugi Python.
 V naslednjem odstavku se bomo vprašali kako lahko formuliramo sintakso
-programskega jezika? In kaj je npr. definicija \emph{kopice}.
-
-V ta namen definiramo mehko idejo po avtorju Hazzan \cite{guideTCS},
-ki je naslednja. Mehka ideja je koncept, ki mu ne moremo pripisati
-toge, niti formalne definicije. Mehke ideje ni niti možno opisati z
-točno določeno aplikacijo. Na tem mestu se postavlja vprašanje kako
-lahko defineramo nekaj kar se odvija po korakih.
+programskega jezika? In kaj je npr. definicija \emph{kopice}.V ta
+namen definiramo mehko idejo po avtorju Hazzan \cite{guideTCS}, ki je
+naslednja. Mehka ideja je koncept, ki mu ne moremo pripisati toge,
+niti formalne definicije. Mehke ideje ni niti možno opisati z točno
+določeno aplikacijo. Na tem mestu se postavlja vprašanje kako lahko
+defineramo nekaj kar se odvija po korakih.
 
 Da odgovorimo na zgornji dve vprašanji, lahko povemo, da so pravila
 sintakse togi orisi pri pisanju programske kode in da so semantična
@@ -776,8 +865,7 @@ znanosti niso le toga pravila ali samo mehke ideje, temeč skupek
 obojega. V spodnji tabeli \ref{tab:koncept_spremenljivka} prikazuje
 primer spremenljivke.
 
-
-\begin{table}[!htb]
+\begin{table}[!h]
 
 \caption{Prikaz dvojnih, togih in mehkih orisov idej na primeru
   spremenljivke \cite{guideTCS}. }
@@ -787,7 +875,7 @@ primer spremenljivke.
   p{0.30\linewidth-2\tabcolsep} |
   p{0.40\linewidth-2\tabcolsep} | }
   \hline
-  %\rowcolor{gray!50}
+  \rowcolor{sbase00!100}
   & \textbf{togi orisi} & \textbf{mehki orisi}\\
   \hline
   ime spremenljivke & Pravilo sintakse. & Potreba po imenu
@@ -808,15 +896,198 @@ primer spremenljivke.
 \end{tabular}
 \end{table}
 
-\subsection{Spremenljive}
+V nadaljevanju bomo pregledali in skušali razložiti osnovne koncepte
+pri programiranju. Z primerom bomo pokazali enega izmed načinov, kako
+jih prestavimo. Za vodilo bomo uporabili učni načrt za OŠ, ki smo ga
+pregledali v poglavju \ref{sec:neobvezno_izbirni_predmet_rac} in SŠ,
+ki je v poglavju \ref{sec:Programiranje_v_SŠ}. Primeri programov, ki
+jih bomo uporabljali in prilagodilo so povzeti s knjige in spletne
+strani \emph{``Learning python the hard way''} \cite{web:PTHardWay}.
+
+
+%%Lahko podamo primere programov z problemskim navodilom in rešitvijo
+%%v Pythonu in Scratchu, kjer je to možno.
+
+\subsubsection{Spremenljive}
 \label{sec:spremenljivke}
 
+V tem poglavju bomo uresničili naslednje cilje vendar smo jim nekoliko
+spremenili vrstni red:
+\begin{itemize}
+\tightlist
+\item \textbf{znajo izpisovati vrednosti spremenljivk med izvajanjem programa
+  in izpisati končni rezultat},
+\item \textbf{znajo spremenljivkam spremeniti vrednost s prireditvenim
+  stavkom},
+\item \textbf{znajo v program vključiti konstante in spremenljivke},
+\item \textbf{ razumejo različne podatkovne tipe in jih znajo uporabiti v
+  programu},
+\item \textbf{znajo v programu prebrati vhodne podatke in jih vključiti v
+  program},
+\end{itemize}
+
+Osnovno interakcijo z računalnikom lahko opišemo na naslednji
+način. Računalniku damo neke vhodne podatke, ta podatke po navodilu
+programa obdela in nam poda rezultate na neko izhodno naprava. Ta
+izhodna naprava je na primer zaslon in na njem se izpisujejo obdelani
+podatki. Izpišimo nekaj stavkov, pri tem uporabljamo ukaz
+\texttt{print}.
+
+\begin{examplebox}[label={prog:izpis}]{Izpis besedila na zaslon |
+    \texttt{01\_izpis\_na\_zaslon.py} \cite{web:PTHardWay}}
+  \textbf{Navodilo naloge:} Sledi navodilu, ki je zapisano v programski
+  kodi.
+
+\rule{\textwidth}{.4pt}
+\begin{lstlisting}[language=Python]
+#Del programa, ki nocemo, da ga uposteva tolmac,
+#oznacimo z # in ga imenujemo komentar.
+print "Pozdravljeni, to je nas prvi izpis na zaslonu."
+print "Izpis druge vrstice na zaslonu."
+print "Izpisovanje na zaslon je zabavno!"
+print "Izpisemo lahko tudi pravzno vrstico. \n"
+#Za izpis prazne vrstive uporabimo "\n"
+print "Pred to vrstico je prazna! in za njo.\n"
+\end{lstlisting}
+\tcblower
+\begin{Verbatim}[fontsize=\footnotesize]
+$ python 01_izpis_na_zaslon.py
+Pozdravljeni, to je nas prvi izpis na zaslonu.
+Izpis druge vrstice na zaslonu.
+Izpisovanje na zaslon je zabavno!
+Izpisemo lahko tudi pravzno vrstico.
+
+Pred to vrstico je prazna! in za njo.
+\end{Verbatim}
+\end{examplebox}
+
+Ena izmed glavnih nalog računalnikov so računske operacije, zato si
+poglejmo dva primera izračunov v programskem jeziku Python.
+
+\begin{examplebox}[label={prog:racunske_operacije}]{Računske operacije |
+    \texttt{02\_racunske\_operacije.py} \cite{web:PTHardWay}}
+  \textbf{Navodilo naloge:} Sledi navodilu, ki je zapisano v programski
+  kodi.
+
+\rule{\textwidth}{.4pt}
+\begin{lstlisting}[language=Python]
+#Izračunajmo nasednje izrazein izpišimo njiho rezultat.
+#Preden poženemo program izračunajmo vrednost sami.
+print 100 - 5%2 + 3*4 - 22/3
+print 4+7 > 13
+\end{lstlisting}
+\tcblower
+\begin{Verbatim}[fontsize=\footnotesize]
+$ python 01_uporaba_spremenljivk.py
+104
+False
+\end{Verbatim}
+\end{examplebox}
+
+
+Spremenljivke so način kako shranjujemo podatke v računalniku.  Ime
+spremenljivke ima podobno vlogo kot imena ljudi ali stvari v
+vsakdanjem življenju. Ljudje in stvari imajo imena zato, da si jih
+lažje zapomnimo in se z njimi in o njih lažje pogovarjamo. Podobno je
+to v programiranju, izbrati si moramo dobra imena spremenljivk, saj
+bomo tako lažje brali napisano kodo. Poglejmo primer
+\ref{prog:spremenljivke}.
+
+\begin{examplebox}[label={prog:spremenljivke}]{Izpis besedila na
+    zaslon | \texttt{03\_uporaba\_spremenljivk.py} \cite{web:PTHardWay}}
+\textbf{Navodilo naloge:}
+
+Na parkirišču je 100 avtomobilov, vsak izmed avtomovilov ima 5
+sedežev. Z temi avtomobili želimo pripeljati 90 potnikov od tega jih
+ima 30 vozniško dovoljenje. Izračunaj in izpiši naslednje podatke.
+\begin{itemize}
+\item Koliko avtomobilov je navoljo.  Koliko šoferjev je navoljo?
+\item Koliko avtomobilov bo ostalo na parkirišču, če bodo vozili vsi
+  šoferji?
+\item Koliko ljudi lahko prepeljemo z vsemi avtomobili?
+\item Koliko avtomobilov bomo uporabili, da pripeljemo vse potnike?
+\item Kakšno je povprečno število potnikov, če vozijo vsi vozniki?
+\end{itemize}
+\rule{\textwidth}{.4pt}
+\begin{lstlisting}[language=Python]
+#1. Določimo spremenljivke:
+avtomobili = 100
+prostor_v_vsakem_avto = 5.0
+potniki = 90
+soferji = 30
+#2. Izračunajmo vrednosti in jih shranimo v spremenljivke:
+avtomobili_ostali_na_parkiriscu = avtomobili - soferji
+kapaciteta_vsi_avtomobili = avtomobili * prostor_v_vsakem_avto
+avtomobili_na_st_potnikov = potniki/prostor_v_vsakem_avto
+povprecno_stevilo_potnikov = potniki/soferji
+#3. Izpišimo vse zahtevane podatke.
+print "Na voljo je", avtomobili, "avtomobilov."
+print "Na voljo je", soferji, "šoferjev."
+print "Na parkiriscu bo ostalo",avtomobili_ostali_na_parkiriscu, "avtomobilov."
+print "Z vsemi avtomobili lahko prepeljemo", kapaciteta_vsi_avtomobili, "potnikov."
+print "Minimalno stevilo avtomobilov je", avtomobili_na_st_potnikov, ",da pripeljemo vse potnike."
+print "Povprecno stevilo potnikov je",povprecno_stevilo_potnikov, ",ce vozijo vsi soferji."
+\end{lstlisting}
+\tcblower
+\begin{Verbatim}[fontsize=\footnotesize]
+$ python 01_uporaba_spremenljivk.py
+Na voljo je  100 avtomobilov.
+Na voljo je  30 šoferjev.
+Na parkiriscu bo ostalo  70 avtomobilov.
+Z vsemi avtomobili lahko prepeljemo  500.0 potnikov.
+Minimalno stevilo avtomobilov je  18.0, da pripeljemo vse potnike.
+Povprecno stevilo potnikov je  3, ce vozijo vsi soferji.
+\end{Verbatim}
+\end{examplebox}
 
 
 
+\subsubsection{Logični operaterji}
+\label{sec:logicni_peraterji}
+
+V tem poglavju bomo uresničili naslednje cilje:
+\begin{itemize}
+\tightlist
+\item \textbf{v program vključijo logične operatorje},
+\end{itemize}
+
+\subsubsection{Pogojni stavki in vejitve}
+\label{sec:pogojni_stavki_vejitve}
+
+V tem poglavju bomo uresničili naslednje cilje:
+\begin{itemize}
+\item \textbf{znajo uporabiti pogojni stavek in izvesti
+    vejitev},
+\end{itemize}
+
+\subsubsection{Zanke}
+\label{sec:zanke}
+
+V tem poglavju bomo uresničili naslednje cilje:
+\begin{itemize}
+\item \textbf{razumejo pojem zanke in ga znajo uporabiti za rešitev
+    problema},
+\end{itemize}
+
+\subsubsection{Kompletksi tipi podatkov}
+\label{sec:kompleksni_tipi_podatkov}
+
+V tem poglavju bomo uresničili naslednje cilje:
+\begin{itemize}
+\item \emph{razumejo kompleksnejše tipe podatkov (nizi,
+    seznami/tabele) in jih znajo uporabiti v programu},
+\end{itemize}
 
 
-
+%Preostali cilji z OŠ so še naslednji!
+% \item \emph{razumejo kompleksnejše tipe podatkov (nizi, seznami/tabele) in
+%   jih znajo uporabiti v programu},
+% \item \textbf{prepoznajo in znajo odpraviti napake v svojem programu},
+% \item \emph{znajo popraviti napako v tujem programu},
+% \item \emph{znajo spremeniti program, da dosežejo nov način delovanja
+%   programa},
+% \item \emph{znajo rezultate naloge zapisati v datoteko},
+% \item \textbf{se seznanijo z dogodkovnim programiranjem},
 
 \section{Spletni portali za učenje programiranja}
 \label{sec:SPUP}
@@ -830,9 +1101,10 @@ premostiti z SPUP.
 
 Spletni portali za učenje programiranja so nastali na različnih
 univerzah po svetu. V nadaljevanju bomo pregledali nekaj takšnih
-primerov. Zanimal na s po spletni portal, ki je nastal na \emph{odprti
-univerzi v Hong Kong-u} (\textbf{OUHK}), na \emph{Univerze Strathclyde iz
-Valike britanije} (\textbf{US}). %Dodaj še druge UNI!
+primerov. Zanimal nas bo spletni portal, ki je nastal na \emph{odprti
+  univerzi v Hong Kong-u} (\textbf{OUHK}), na \emph{Univerze
+  Strathclyde iz Valike britanije} (\textbf{US}) in \emph{Queensland
+  University of Technology, Australia} (\textbf {QUTA}). %Dodaj še druge UNI!
 
 Zanimali nas bodo predmeti, ki veljajo za začetne pri poučevanju
 računalniške znanosti in programiranja. \textbf{Novinci}, kot jih bomo
@@ -845,7 +1117,7 @@ podobno kot študentje in jih bomo zato vse poimenovali
 %%OPOMBA: To trdim brez citata.
 Kot je razvidno z literature bomo lahko sklepali na nekatere skupne
 značilnosti vseh novincev, ne glede na težavnostno stopnjo na kateri
-se nahajajo, saj je programiranje veščina, ki ni naravna in se je
+se nahajajo, saj je programiranje veščina, ki ni dana naravno in se je
 moramo vsak priučiti.
 
 %Kaj je spletni portal?
@@ -876,7 +1148,19 @@ zavira in slabša učni proces. Težava se še stopnjuje če študenti niso
 deležni tradicionalnega vpisa na univerze, kjer bi lahko bili vsak dan
 v stiku s svojimi kolegi in mentorji, ampak so deležni izobraževanja
 na daljavo, ki ga podrobneje obdelamo v poglavju
-\pageref{sec:Učenje_na_daljavo}.
+\ref{sec:Učenje_na_daljavo}.
+
+Podobno pravijo na QUTA, saj je pri samem vadenju programiranja
+pomembno, da ob težavah, novinci dobijo čimprajšen odziv mentorja. V
+velikih razredih se to izkaže za zelo zahtevno. Z uporabo spletnih
+tehnologij so v pomoč prav spletni portali za učenje programiranja. Z
+njimi lahko razrešimo kar nekaj tegob, ki jih pestijo novince
+\cite{thesisAWebP}.
+
+Ena od prednosti dela z takšnim sistemom je ta, da novinci niso odvisni
+od mentorjevih uradnih govorilnih ur, pravtako tako lahko naloge
+opravljajo kadar koli \cite{thesisAWebP}.
+
 
 Da bi študentje, lahko normalno sledili pouku na daljavo, si morajo
 doma urediti delovno okolje, kjer lahko programirajo. Študenti,
@@ -921,6 +1205,40 @@ konceptih programiranja. Študije kažejo da študenti po enem letu
 predmeta programiranja še vedno nimajo pravih mentalnih modelov o
 osnovnih programskih konceptih.
 
+Na univerzi QUTA se z začetnimi predmeti programiranja srečujejo s
+podobnimi težavami, kotna OUHK in US.
+
+\begin{enumerate}
+\tightlist
+\item Inštalacija in nastavitve okolja za programiranje.
+\item Uporaba urejevalnika besedil.
+\item Razumevanje programskih vprašanj in uporabe sintakse jezika pri
+  pisanju programske kode.
+\item  Razumevanje napak prevajalnika.
+\item Razhroščevanje.
+\end{enumerate}
+
+Ugotavljajo, da je pri damih vajah programiranja pomembno, da ob
+težavah, novinci dobijo čimprajšen odziv mentorja. V velikih razredih
+se to izkaže za zelo zahtevno. Tudi začetniki, ki uspešno premagajo
+začetne ovire in se lotijo takojšnjega programiranja, imajo zelo slabo
+napisano in konstruirano programsko kodo. Pomagati študentom, pistati
+kvalitetno programsko kodo je prav časovno zelo zahtevno. Težave
+programiranja se stopnjujejo ko se za učenje progremiranja uporabljajo
+OO programski jeziki, saj ti zahtevajo visoko stopnjo stopnjo
+abstraktnega razumevanja programskih konceptov. Za izdelavo spletnega
+portala za učenje programiranja so na QUTA bili pomembni naslednji
+cilji \cite{thesisAWebP}.
+
+\begin{itemize}
+\item Omogočiti lažji začetek pri učenju programiranja, z pogostim
+  odzivom mentorjev na težave novincev. S pomočjo ob pravem času
+  spremenimo odnos novincev do programiranja.
+\item Izboljšati uspeh začetnih predmetov programiranja.
+\item Da pomagamo mentorjem pri učenju in administraciji predmetov
+  programiranja.
+\end{itemize}
+
 \subsection{Primeri implementacije in sistemska arhitektura}
 \label{sec:sistemska_arhitektura_All}
 
@@ -964,7 +1282,6 @@ napake, v trenutni aktivnosti, prav tako se napaka izpiše na zaslonu
 študenta. Vsako aktivnost zajame dnevnik študentove aktivnosti in jo shrani v
 podatkovno bazo. Z analizatorjem dnevnika študentove aktivnosti,
 mentorji dobijo vpogled v delo študenta in njegovega napredka.
-
 
 \subsection{Pregled delovanja in interakcija s SPUP}
 \label{sec:pregled_delovanja_in_interakcija}
@@ -1047,51 +1364,24 @@ si ga je prej moral predstavljati. Tako ima možnost, da zazna
 nepravilnost v svojem mišljenju in tako lahko gradi na pravilnem
 konceptu \cite{mentalModels}.
 
-Poglejmo primer spletnega portala, ki ga je izdelal avtor
-\cite{thesisAWebP}, in ima naslednje elemente.
+%% QUTA
+V preteklosti je bilo razvitih mnogo orodij, ki so nastala ravno z
+raziskovanja učenja programiranja, vendar mnoga od teh zahtevajo, da
+študenti pišejo celotne programe od začetka do konca. Spletni portal
+v primeru QUTA uči programiranja v programskem jeziku Java in ima
+naslednjo naslednje zmožnosti \cite{thesisAWebP}.
 
 \begin{enumerate}
-%\def\labelenumi{\arabic{enumi}.}
 \tightlist
-\item
-  Spletni portal za programiranja, ki omogoča naloge tipa ``Zapolni
-  prazna mesta''.
-\item
-  Ogrodje za analizo, ki preverja kvaliteto in pravilnost, nalog, tipa
-  ``Zapolni prazna mesta''.
-\item
-  Avtomatski sistem za dajanje povratnih informacij, ki sporoča
-  prilagojena sporočila prevajalnika in formalni odziv študentom in
-  njihovim mentorjem. Poročilo vsebuje kvaliteto napisanega programa,
-  strukturo in pravilnost glede na programsko analizo.
+\item Spletni portal za programiranja, ki omogoča naloge tipa ``Zapolni
+   prazna mesta''.
+ \item Ogrodje za analizo, ki preverja kvaliteto in pravilnost, nalog,
+   tipa "Zapolni prazna mesta".
+ \item  Avtomatski sistem za dajanje povratnih informacij, ki sporoča
+   prilagojena sporočila prevajalnika in formalni odziv študentom in
+   njihovim mentorjem. Poročilo vsebuje kvaliteto napisanega programa,
+   strukturo in pravilnost glede na programsko analizo.
 \end{enumerate}
-
-%\subsubsection{Analiza programske kode}
-%\label{sec:analiza_programske_kode}
-
-% Različne vrste analiz in povratna informacije o napakah. Kako je to
-% dobro urejeno pri spletnih portalih*?
-
-Dober odziv spletnega portala mora dati poročilo o pravilnosti programa in o
-kvaliteti \cite{thesisAWebP}.
-
-Ogrodje (ang. framework) za analizo programske kode naj bi vsebovalo:
-
-\begin{itemize}
-\tightlist
-\item
-  Sintaktično ali semantično opozarjanje na napake ali napake
-  prevajalnika
-\item
-  odziv na kvaliteto in pravilnost programske kode //Ali ga sistem nima
-  ali je ta pomnanjlkjiv. //Zgornje pomaga predvsem slabpim učencem.
-  //Večina sistemov izvaja statično analizo programske kode in tako ni v
-  pomoč kakšne kvalitete je ta koda.
-\item
-  Formalni odzin učitelja oz. komunikacija med učiteljem in učencem.
-\end{itemize}
-
-
 
 \subsection{Rezultati izvedenih rešitev SPUP}
 \label{sec:rezultati_izvedenih_rešitev}
@@ -1120,30 +1410,6 @@ konflikta pokažejo da so študenti bolj zavzeti za učni material in jih
 motivira tako, da si prej ustvarijo pravilno mentalno predstavo
 \cite{mentalModels}.
 
-%%Učno okolje.
-%%Preglej pravilnost programerskih slovenskih izrazov.
-%% Slika portala za članka.
-
-
-Nekatere osnove težave, katere srečajo programerji novinci \cite{thesisAWebP}:
-\begin{enumerate}
-\tightlist
-\item
-  Inštalacija in nastavitve okolja za programiranje.
-\item
-  Uporaba urejevalnika besedil.
-\item Razumevanje napisanih nalog oz. problemov in uporabe sintakse
-  programskega jezika pri pisanju programske kode.
-\item
-  Razumevanje napak prevajalnika.
-\item
-  Razhroščevanje.
-\end{enumerate}
-
-V preteklosti je bilo razvitih mnogo orodij, ki so nastala ravno z
-raziskovanja učenja programiranja, vendar mnoga od teh zahtevajo, da
-študenti pišejo celotne programe od začetka do konca.
-
 Tudi začetniki, ki uspešno premagajo začetne ovire in se lotijo
 takojšnjega programiranja, imajo zelo slabo napisano in konstruirano
 programsko kodo. Pomagati novincem, pistati kvalitetno programsko kodo
@@ -1160,9 +1426,25 @@ načrtovani predvsem za zahtevne programerje.
 % je določeno na državnem nivoju da se učit ravno ta dva programska
 % jezika
 
+Rezultat dela avtorjev spletnega portala QUTA, gre še nekoliko naprej
+od OUHK in v njihov spletni portal vgradijo, odziv spletnega portala,
+ki mora o pravilnosti programa in o kvaliteti. Ogrodje
+\emph{(ang. framework)} za analizo programske kode vsebuje naslednje
+komponente \cite{thesisAWebP}.
 
+\begin{itemize}
+\tightlist
+\item
+  Sintaktično ali semantično opozarjanje na napake ali napake
+  prevajalnika.
+\item
+  odziv na kvaliteto in pravilnost programske kode.
+\item
+  Formalni odzin učitelja oz. komunikacija med učiteljem in učencem.
+\end{itemize}
 
-\subsection{Povzetek problematika začetkov učenja programiranja}
+%Nekakšen povzetek zgornjih člankov. Vprašanja za naprej.
+\subsection{Kaj so spletni portali z učenje programiranja? }
 \label{sec:Problematika_začetkov_učenja_programiranja}
 
 % Po pregledu, ki se ukvarjajo z učenjem programiranja lahko
@@ -1197,31 +1479,28 @@ Strnimo nekatere značilnosti težav novincev.
 \begin{itemize}
 \tightlist
 \item Težave pri namestitvi in nastavitvah programske opreme,
-  prevajalnika in razvojnega okolja (OUHK, ).
+  prevajalnika in razvojnega okolja (OUHK, QUTA ).
 \item Dostop do mentorjev zaradi časovne dostopnosti in Komunikacija v
-  primeru izobraževanja na daljavo (OUHK).
-\item
+  primeru izobraževanja na daljavo (OUHK, QUTA).
+\item Uporaba urejevalnika besedil (QUTA).
+\item Razumevanje programskih vprašanj in uprabe sintakse jezika pri
+  pisanj programske kode (QUTA).
+\item Uporoaba tehnik razhroščevanje (QUTA).
+\item Razumevanje napak prevajalnika (QUTA).
+\item Razumevanje osnovnih programskih koceptov, slabo vpliva na
+  reševanje koceptov (US).
 \end{itemize}
 
-V začetku nas bo zanimalo kaj so spletni portali za učenje. Spoznali
-bomo, da poznamo različne kategorije spletnih portalov za posredovanje
-različnega znanja in veščin. Zanimali nas bodo  predvsem spletni
-portali, ki učijo znanje programiranja.
+% V začetku nas bo zanimalo kaj so spletni portali za učenje. Spoznali
+% bomo, da poznamo različne kategorije spletnih portalov za posredovanje
+% različnega znanja in veščin. Zanimali nas bodo  predvsem spletni
+% portali, ki učijo znanje programiranja.
 %Posvetili se bomo predvsem takšnim in podobnim spletnim portalom!
 
-\subsection{Predlagane rešitve SPZUP na težave novincev}
-\label{predlagane_rešitve_na_težave_novincev}
+%subsection{Predlagane rešitve SPZUP na težave novincev}
+%\label{predlagane_rešitve_na_težave_novincev}
 
-Pri samem vadenju programiranja je pomembno, da ob težavah, novinci
-dobijo čimprajšen odziv mentorja. V velikih razredih se to izkaže za
-zelo zahtevno. Z uporabo spletnih tehnologij so v pomoč prav spletni
-portali za učenje programiranja. Z njimi lahko razrešimo kar nekaj
-tegob, ki jih pestijo novince \cite{thesisAWebP}.
-
-Ena od prednosti dela z takšnim sistemom je ta, da novinci niso odvisni
-od mentorjevih uradnih govorilnih ur, pravtako tako lahko naloge
-opravljajo kadar koli \cite{thesisAWebP}.
-
+TODO: Strnjeno o tem kaj je spletni portal Kaj so spletni portali?
 \section{Strategije reševanja problemov}
 \label{sec:strategije_reševanja_problemov}
 
@@ -1647,9 +1926,9 @@ kriterije,
 \end{itemize}
 
 \section{Možni načini uporabe spletnih portalov pri pouku}
-\label{sec:načini_uporabe_sp},
+\label{sec:načini_uporabe_sp}
 
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "diploma"
+  %%% Local Variables:
+  %%% mode: latex
+  %%% TeX-master: "diploma"
 %%% End:

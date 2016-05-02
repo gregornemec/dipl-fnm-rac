@@ -35,6 +35,7 @@
 \allsectionsfont{\normalfont}	% Change font of al section commands
 
 \usepackage[shortlabels]{enumitem}
+\setlist{nosep} %%Zmanjša razdaljo med okolji za seznami in besedilom!cg
 
 \usepackage{setspace}
 
@@ -60,8 +61,6 @@
 
 \usepackage[pdftex,dvipsnames,table,x11names,rgb,html]{xcolor}
 
-%%Barvne škatle
-\usepackage{tcolorbox}
 \usepackage{wrapfig}
 
 %%%Nastavitve barv
@@ -95,18 +94,19 @@
     % How/what to match
     sensitive=true,
     % Border (above and below)
-    frame=lines,
+    frame=none,
     % Extra margin on line (align with paragraph)
     xleftmargin=\parindent,
     % Put extra space under caption
     belowcaptionskip=1\baselineskip,
     % Colors
+    rulecolor=\color{sbase1},
     backgroundcolor=\color{sbase3},
     basicstyle=\color{sbase00}\ttfamily\footnotesize,
     keywordstyle=\color{scyan},
     commentstyle=\color{sbase1},
     stringstyle=\color{sblue},
-    numberstyle=\color{sviolet},
+    numberstyle=\color{sbase1},
     identifierstyle=\color{sbase00},
     % Break long lines into multiple lines?
     breaklines=true,
@@ -115,11 +115,30 @@
     tabsize=2,
     numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
     numbersep=5pt,                   % how far the line-numbers are from the code
-    numberstyle=\footnotesize        %\color{mygray}, % the style that is used for the line-number
+    numberstyle=\footnotesize,        %\color{mygray}, % the style
+                                %that
+   % inputencoding=utf8,
+    extendedchars=true,
+    literate=
+    {š}{{\v{s}}}1
+    {č}{{\v{c}}}1
+    {ž}{{\v{z}}}1
 }
 
+\usepackage{fancyvrb}
 
-
+%%Barvne škatle
+\usepackage{tcolorbox}
+%ustvarjanje lastnoe barvne škatle!
+\newtcolorbox[auto counter]{examplebox}[2][]{%
+colframe=sbase02!100,
+colback=sbase3!100,
+coltitle=sbase1!100!black,
+colupper=sbase01!100!black,
+collower=sbase01!100!black,
+fonttitle=\bfseries,
+title=Primer ~\thetcbcounter: #2,#1
+}
 
 
 \usepackage{xargs}  %Uporabei več kot en argument v novem ukazu
