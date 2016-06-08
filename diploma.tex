@@ -141,6 +141,18 @@ title=Primer ~\thetcbcounter: #2,#1
 }
 
 
+%ustvarjanje lastnoe barvne škatle za osebno posameznega portala!
+\newtcolorbox[auto counter]{osebnabox}[2][]{%
+colframe=sbase02!100,
+colback=sbase3!100,
+coltitle=sbase1!100!black,
+colupper=sbase01!100!black,
+collower=sbase01!100!black,
+fonttitle=\bfseries,
+title= #2,#1
+}
+
+
 \usepackage{xargs}  %Uporabei več kot en argument v novem ukazu
 %Paket za dodajanje todo oblačkov!
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
@@ -222,7 +234,9 @@ title=Primer ~\thetcbcounter: #2,#1
 \setcounter{page}{1}
 \input{./uvod.tex}
 \newpage
-\input{./vsebina.tex}
+\input{./teorija.tex}
+\newpage
+\input{./pregled.tex}
 % \newpage
 % %%Recept za vstavljanje poljubnega naslova za Viri in literatura
 \cleardoublepage
