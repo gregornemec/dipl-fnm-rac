@@ -111,9 +111,9 @@ računalnikom in informacijskimi sistemi ukvarjali na poklicni ravni
 %%Tu sem napisal po svoje.
 Gerlič raziskuje podrobno strokovno področje na katerem se
 izobražujejo bodoči učitelji računalništva. Lahko povemo, da sem
-spadajo vse ozko usmerjene računalniške in informacijske smeri srednjih
-šol, visokih, višjih ter univerzitetnih študijev. Zanima nas področje
-programiranja, kar je predvsem predmet strokovnega
+spadajo vse ozko usmerjene računalniške in informacijske smeri
+srednjih šol, visokih, višjih ter univerzitetnih študijev. Zanima nas
+področje programiranja, kar je predvsem predmet strokovnega
 izobraževanja. Čeprav se bomo v diplomskem delu posvetili spletnim
 portalom za učenje programiranja na splošnem nivoju, bomo pozneje vso
 znanje zlahka prenesli tudi na ožje strokovno izobraževanj, saj je tu
@@ -648,7 +648,7 @@ so:
 % dva primera.
 
 Prikazali bomo več različnih predstavitev algoritma, najprej bomo
-rešitev zapisali v pesedilni obliki, zatem bomo rešitev podali z
+rešitev zapisali v besedilni obliki, zatem bomo rešitev podali z
 diagramom poteka, na koncu bomo rešitev podali še z programskim
 jezikom Scratch in Python.  Za primer bomo prikazali primer algoritma,
 ki reši naslednjo nalogo.
@@ -696,8 +696,6 @@ def najdiNajvecjeStevilo(seznam):
 \end{lstlisting}
 \end{examplebox}
 
-
-
 \subsubsection{Programiranje in kodiranje}
 \label{sec:programiranje_kodiranje}
 
@@ -733,16 +731,34 @@ prepoznati dober urejevalnik besedil.
 %Podrobneje opiši zmožnosti urejevalnika besedil.
 
 \begin{itemize}
-\item Barvanje rezerviranih besed prog. kode.
-\item Samodejno zamikanje vrstic programske kode.
-\item Ponujanje predlog za samo dokončevanje rezerviranih
-    besed in funkcij prog. jezika
-\item Izpis opis funkcij z atributi.
-\item Samodejno zaključevanje oklepajev.
+\item \textbf{Barvanje rezerviranih besed prog. kode.} je značilno za
+  skoraj vsak novo dobni urejevalnik besedil. Z različnimi barvami je
+  olajšano branje programske kode.
+\item \textbf{Samodejno zamikanje vrstic programske
+    kode}. Urejevalnik, ki ima to zmožnost zna prepoznati, ko sledi
+  nov del programske kode, ki je zamaknjen npr. za stavkom
+  \texttt{if/else}.
+\item \textbf{Ponujanje predlog za samo dokončevanje rezerviranih
+    besed in funkcij prog. jezika}. Ob pisanju programske kode
+  urejevalnik ponuja dokončevanje programske kode.
+\item \textbf{Izpis opisa funkcij z atributi}. 
+\item \textbf{Samodejno zaključevanje oklepajev}. Odprti oklepaj se
+  samodejno zaključi z zaprtim in smernik za pisanje se postavi v
+  sredino med oba oklepaja. 
 \end{itemize}
 
 \subsubsection{Integrirano razvojno okolje (\emph{ang. Integrated
     development environment \textbf{IDE}})}
+
+Del integriranega razvojnega okolja (\textbf{IRO}) je dober
+urejevalnik besedil, kot smo ga opisali v prejšnjem poglavju. Za IRO
+je značilno, da omogoča \textbf{pisanje, testiranje, razhroščevanje}
+in \textbf{prevajanje končnega programa}. Omogočajo povezavo med
+datotekami projekta in knjižnicami. Svoje zmožnosti nadgrajujejo s
+številnimi zunanjimi orodji, ki jih navadno vklopimo preko
+vtičnikov. Slabost IRO je ta da so veliki programski paketi, ki včasih
+znajo biti okorni in počasni. Pri nekaterih obsežnih IRO je tudi čas,
+ki ga potrebujemo, da se ga naučimo uporabljati dolgotrajen.
 
 \subsection{Programske paradigme}
 \label{sec:programske_paradigme}
@@ -762,11 +778,9 @@ pogled in na ta način formulira rešitev za dani problem, ki ga razdeli
 na manjše dele med katerimi definira razmerja.
 
 Programske paradigme so na primer proceduralno, objektno orientirano,
-funkcijsko, logično in istočasno programiranje.
-
-V nadaljevanju bomo spoznali značilnosti programske paradigme
-objektnega programiranja, saj je ta v zadnjih letih naj bolj
-popularna.
+funkcijsko, logično in istočasno programiranje. V nadaljevanju
+spoznamo značilnosti programske paradigme objektnega programiranja,
+saj je ta v zadnjih letih naj bolj popularna.
 
 \subsubsection{Objektno orientirano programiranje}
 \label{sec:objektno_orijentirano_programiranje}
@@ -846,7 +860,9 @@ primerom programske, kode tako bomo dobili lažjo predstavo kakšna je
 razlika v sintaksi.
 
 Večina od zgoraj naštetih programskih jezikov je \textbf{OO} razen
-izjeme \textbf{C}-ja, ki je predhodnik \textbf{C++}.
+izjeme \textbf{C}-ja, ki je predhodnik \textbf{C++}.  Za nas bodo z
+izobraževalnega vidika zanimivi predvsme tisti, ki se uporabljajo pri
+nas.
 
 %Podajmo še razliko med programsimi jeziki, ki so za večnamesko uporabo
 %in tistimi, ki jim pravimo, da imajo ožjo uporabnost.
@@ -855,9 +871,6 @@ izjeme \textbf{C}-ja, ki je predhodnik \textbf{C++}.
 %Uredi ker je zmazek
 
 %% Napiši še kaj o generacijah programskih jezikov.
-
-Za nas bodo z izobraževalnega vidika zanimivi predvsme tisti, ki se
-uporabljajo pri nas.
 
 \subsubsection{Java}
 \label{sec:pj:JAVA}
@@ -1141,7 +1154,6 @@ False
 \end{Verbatim}
 \end{examplebox}
 
-
 Spremenljivke so način kako shranjujemo podatke v računalniku.  Ime
 spremenljivke ima podobno vlogo kot imena ljudi ali stvari v
 vsakdanjem življenju. Ljudje in stvari imajo imena zato, da si jih
@@ -1197,8 +1209,6 @@ Povprecno stevilo potnikov je  3, ce vozijo vsi soferji.
 \end{Verbatim}
 \end{examplebox}
 
-
-
 \subsubsection{Logični operaterji}
 \label{sec:logicni_peraterji}
 
@@ -1226,15 +1236,14 @@ V tem poglavju bomo uresničili naslednje cilje:
     problema},
 \end{itemize}
 
-\subsubsection{Kompletksi tipi podatkov}
-\label{sec:kompleksni_tipi_podatkov}
-
-V tem poglavju bomo uresničili naslednje cilje:
-\begin{itemize}
-\item \emph{razumejo kompleksnejše tipe podatkov (nizi,
-    seznami/tabele) in jih znajo uporabiti v programu},
-\end{itemize}
-
+%\subsubsection{Kompletksi tipi podatkov}
+%\label{sec:kompleksni_tipi_podatkov}
+%
+%V tem poglavju bomo uresničili naslednje cilje:
+%\begin{itemize}
+%\item \emph{razumejo kompleksnejše tipe podatkov (nizi,
+%    seznami/tabele) in jih znajo uporabiti v programu},
+%\end{itemize}
 
 %Preostali cilji z OŠ so še naslednji!
 % \item \emph{razumejo kompleksnejše tipe podatkov (nizi, seznami/tabele) in
@@ -1283,8 +1292,8 @@ moramo vsak priučiti.
 %Spletni sistem omogoča študentom in mentorjem spletno okolje za učenje
 %programiran.
 
- %Kako opredelimo kaj je to (ang. Course) ali je to en predmet, ali
- %skupek predmetov.
+%Kako opredelimo kaj je to (ang. Course) ali je to en predmet, ali
+%skupek predmetov.
 
 \subsection{Razlogi za nastanek spletnih portalov}
 \label{sec:razlogi_za_nastanek_SPUP}
