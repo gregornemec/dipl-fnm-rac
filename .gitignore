@@ -9,7 +9,7 @@ auto/*
 *.aux
 *.toc
 *.dvi
-
+*.lof
 
 #Other
 .projectile
