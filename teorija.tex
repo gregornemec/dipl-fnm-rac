@@ -910,7 +910,6 @@ class First {
 \end{lstlisting}
 \end{examplebox}
 
-
 \subsubsection{C++}
 \label{sec:pj_c++}
 
@@ -1181,21 +1180,22 @@ ima 30 vozniško dovoljenje. Izračunaj in izpiši naslednje podatke.
 \begin{lstlisting}[language=Python]
 #1. Določimo spremenljivke:
 avtomobili = 100
-prostor_v_vsakem_avto = 5.0
+prostor_v_avto = 5.0
 potniki = 90
 soferji = 30
 #2. Izračunajmo vrednosti in jih shranimo v spremenljivke:
-avtomobili_ostali_na_parkiriscu = avtomobili - soferji
-kapaciteta_vsi_avtomobili = avtomobili * prostor_v_vsakem_avto
-avtomobili_na_st_potnikov = potniki/prostor_v_vsakem_avto
-povprecno_stevilo_potnikov = potniki/soferji
+avtomob_na_park = avtomobili - soferji
+kapac_avtomob = avtomobili * prostor_v_avto
+avtomob_na_potnikov = potniki/prostor_v_avto
+povpr_st_potnikov = potniki/soferji
 #3. Izpišimo vse zahtevane podatke.
-print "Na voljo je", avtomobili, "avtomobilov."
-print "Na voljo je", soferji, "šoferjev."
-print "Na parkiriscu bo ostalo",avtomobili_ostali_na_parkiriscu, "avtomobilov."
-print "Z vsemi avtomobili lahko prepeljemo", kapaciteta_vsi_avtomobili, "potnikov."
-print "Minimalno stevilo avtomobilov je", avtomobili_na_st_potnikov, ",da pripeljemo vse potnike."
-print "Povprecno stevilo potnikov je",povprecno_stevilo_potnikov, ",ce vozijo vsi soferji."
+print ("Na voljo je", avtomobili, "avtomobilov.")
+print ("Na voljo je", soferji, "šoferjev.")
+print ("Na parkiriscu bo ostalo",avtomob_na_park, "avtomobilov.")
+print ("Z vsemi avtomobili prepeljemo", kapac_avtomob, "potnikov.")
+print ("Min. st. avtomobilov je", avtomob_na_potnikov, ",da pripeljemo vse potnike.")
+print ("Povpr. st. potnikov je",povpr_st_potnikov, ",ce vozijo vsi soferji.")
+
 \end{lstlisting}
 \tcblower
 \begin{Verbatim}[fontsize=\footnotesize]
@@ -1209,32 +1209,73 @@ Povprecno stevilo potnikov je  3, ce vozijo vsi soferji.
 \end{Verbatim}
 \end{examplebox}
 
-\subsubsection{Logični operaterji}
-\label{sec:logicni_peraterji}
+% \subsubsection{Logični operaterji}
+% \label{sec:logicni_peraterji}
 
-V tem poglavju bomo uresničili naslednje cilje:
-\begin{itemize}
-\tightlist
-\item \textbf{v program vključijo logične operatorje},
-\end{itemize}
+% V tem poglavju bomo uresničili naslednje cilje:
+% \begin{itemize}
+% \tightlist
+% \item \textbf{v program vključijo logične operatorje},
+% \end{itemize}
 
 \subsubsection{Pogojni stavki in vejitve}
 \label{sec:pogojni_stavki_vejitve}
 
-V tem poglavju bomo uresničili naslednje cilje:
-\begin{itemize}
-\item \textbf{znajo uporabiti pogojni stavek in izvesti
-    vejitev},
-\end{itemize}
+V tem poglavju bomo uresničili naslednje cilje: \textbf{znajo
+  uporabiti pogojni stavek in izvesti vejitev}.
+
+\begin{examplebox}[label={prog:pogojni}]{Program odločitve |
+    \texttt{05\_pogojni\_stavki.py} \cite{web:PTHardWay}}
+\textbf{Navodilo naloge:}
+Kodo programa spremeni tako, da boo potniki potovali z avtomobili. 
+\rule{\textwidth}{.4pt}
+\begin{lstlisting}[language=Python]
+potniki = 40
+avtomobili = 40
+if avtomobili > potniki:
+    print ("Pojdite z avtomobili.")
+elif avtomobili < potniki:
+    print ("Ne morete z avtomobili.")
+else:
+     print ("Ne morem se odločiti.")
+\end{lstlisting}
+\tcblower
+\begin{Verbatim}[fontsize=\footnotesize]
+$ python 05_pogojni_stavki.py
+Ne morem se odločiti.
+\end{Verbatim}
+\end{examplebox}
 
 \subsubsection{Zanke}
 \label{sec:zanke}
 
-V tem poglavju bomo uresničili naslednje cilje:
-\begin{itemize}
-\item \textbf{razumejo pojem zanke in ga znajo uporabiti za rešitev
-    problema},
-\end{itemize}
+V tem poglavju bomo uresničili naslednje cilje: \textbf{razumejo pojem zanke
+in ga znajo uporabiti za rešitev problema}.
+
+\begin{examplebox}[label={prog:zanka}]{Zanka |
+    \texttt{06\_zanka.py} \cite{web:PTHardWay}}
+  \textbf{Navodilo naloge:}
+  Napišite zanko, ki pregleda seznam in prešteje in izpiše vsa liha
+  števila.
+\rule{\textwidth}{.4pt}
+\begin{lstlisting}[language=Python]
+#Podan seznam celih stevil.
+cela_st = [11, 41, 2, 32, 12]
+vsota_lihih = 0
+for st in cela_st:
+    if st%2 == 1:
+        print (st)
+        vsota_lihih += 1
+print ("Vseh lihih stevil:", vsota_lihih)
+\end{lstlisting}
+\tcblower
+\begin{Verbatim}[fontsize=\footnotesize]
+$ python 06_zanka.py
+11
+41
+Vseh lihih stevil: 2
+\end{Verbatim}
+\end{examplebox}
 
 %\subsubsection{Kompletksi tipi podatkov}
 %\label{sec:kompleksni_tipi_podatkov}
