@@ -5,6 +5,8 @@
 % Copyright: http://www.howtotex.com/
 % Date: March 2011
 
+%\RequirePackage[log]{snapshot}
+
 %%% Preamble
 \PassOptionsToPackage{table}{xcolor}
 \documentclass[12pt, a4paper, oneside, slovene]{article}
@@ -22,7 +24,7 @@
 \usepackage{graphicx}
 \usepackage{grffile}
 %\graphicspath{{./svg}}
-\graphicspath{{./pdf_tex/}}
+%\graphicspath{{./poglavja/}}
 
 % Enable pdflatex
 %\usepackage{pdfpages}
@@ -232,22 +234,55 @@ title= #2,#1
 
 \thispagestyle{empty}
 \input{./naslovnica.tex}
+% \newpage
+%  \thispagestyle{empty}
+% \input{./podnaslovnica.tex}
+% \newpage
+% \thispagestyle{empty}
+% \input{zahvala.tex}
+% \newpage
+% \thispagestyle{empty}
+% \input{izjava.tex}
+% \newpage
+% \thispagestyle{empty}
+% \input{povzetek_si.tex}
+% \newpage
+% \thispagestyle{empty}
+% \input{povzetek_en.tex}
+ \newpage
+\pagestyle{fancy}
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \newpage
 \tableofcontents
-\newpage
-\listoftables
+%\newpage
+%\listoftables
 \newpage
 \listoffigures
 \newpage
 \input{./seznam-kratic.tex}
 \newpage
 \pagestyle{fancy}
+\pagenumbering{arabic}
 \setcounter{page}{1}
-\input{./uvod.tex}
+\input{./poglavja/01_uvod.tex}
 \newpage
-\input{./teorija.tex}
+\input{./poglavja/02_uporaba_rac_izo.tex}
 \newpage
-\input{./pregled.tex}
+\input{./poglavja/03_rac_znanost_prog.tex}
+\newpage
+\input{./poglavja/04_strategije_pouka.tex}
+\newpage
+\input{./poglavja/05_spup.tex}
+\newpage
+\input{./poglavja/06_kriteriji_za_klas.tex}
+\newpage
+\input{./poglavja/07_pregled_sp.tex}
+\newpage
+\input{./poglavja/08_nacini_uporabe.tex}
+\newpage
+\input{./poglavja/09_zakljucek.tex}
+
 % \newpage
 % %%Recept za vstavljanje poljubnega naslova za Viri in literatura
 \cleardoublepage
@@ -258,8 +293,6 @@ title= #2,#1
 %\addcontentsline{toc}{section}{Literatura in viri}
 % %\addcontentsline{toc}{section}{Literatura}
 \input{./literatura.tex}
-
-
 
 
 %%% End document

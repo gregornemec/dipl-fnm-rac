@@ -1,7 +1,7 @@
 #Ignored folders
 auto/*
 .git/*
-
+trash/*
 
 #Ignored file types
 *.log
