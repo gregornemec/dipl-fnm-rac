@@ -2,7 +2,8 @@
 auto/*
 .git/*
 trash/*
-
+poglavja/auto/*
+images/sc_web_orig/*
 #Ignored file types
 *.log
 *.out
@@ -11,6 +12,7 @@ trash/*
 *.dvi
 *.lof
 *.txt
+*.lot
 
 #Other
 .projectile
@@ -25,6 +27,5 @@ diploma-fnm-example.tex
 _region_.tex
 .*
 /SP_za_učenje_prog-Gregor_Nemec-v0001.pdf
-y
 /_region_.pdf
 /vsebina_backup.tex
