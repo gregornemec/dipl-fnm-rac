@@ -13,6 +13,7 @@ images/sc_web_orig/*
 *.lof
 *.txt
 *.lot
+*.el
 
 #Other
 .projectile
