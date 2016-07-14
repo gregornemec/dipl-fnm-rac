@@ -32,7 +32,7 @@
 %\usepackage{import}
 
 \usepackage{url}
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 
 \usepackage{lscape}
 
@@ -204,13 +204,16 @@ title= #2,#1
 %Spremenljivke
 
 %Ustanova
-\newcommand{\univerza}{UNIVERZA V MARIBORU}
-\newcommand{\fakulteta}{FAKULTETA ZA NARAVOSLOVJE IN MATEMATIKO}
+\newcommand{\univerza}{Univerza v Mariboru}
+\newcommand{\UNIVERZA}{UNIVERZA V MARIBORU}
+\newcommand{\fakulteta}{Fakulteta za naravoslovje in matematiko}
+\newcommand{\FAKULTETA}{FAKULTETA ZA NARAVOSLOVJE IN MATEMATIKO}
 \newcommand{\naslovfak}{Koroška cesta 160, 2000 Maribor}
 \newcommand{\oddelek}{Oddelek za matematiko in računalništvo}
 
 %Naslov
-\newcommand{\naslov}{DIPLOMSKO DELO} \newcommand{\podnaslov}{Spletni
+\newcommand{\naslov}{DIPLOMSKO DELO}
+\newcommand{\podnaslov}{Spletni
   portali za učenje programiranja: klasifikacija in možnosti uporabe v
   izobraževanj}
 
@@ -234,21 +237,21 @@ title= #2,#1
 
 \thispagestyle{empty}
 \input{./naslovnica.tex}
-% \newpage
-%  \thispagestyle{empty}
-% \input{./podnaslovnica.tex}
-% \newpage
-% \thispagestyle{empty}
-% \input{zahvala.tex}
-% \newpage
-% \thispagestyle{empty}
-% \input{izjava.tex}
-% \newpage
-% \thispagestyle{empty}
-% \input{povzetek_si.tex}
-% \newpage
-% \thispagestyle{empty}
-% \input{povzetek_en.tex}
+\newpage
+\thispagestyle{empty}
+\input{./podnaslovnica.tex}
+\newpage
+\thispagestyle{empty}
+\input{zahvala.tex}
+\newpage
+\thispagestyle{empty}
+\input{izjava.tex}
+\newpage
+\thispagestyle{empty}
+\input{povzetek_si.tex}
+\newpage
+\thispagestyle{empty}
+\input{povzetek_en.tex}
  \newpage
 \pagestyle{fancy}
 \pagenumbering{Roman}
