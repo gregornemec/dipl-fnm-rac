@@ -73,12 +73,12 @@ je vnos podatkov z tekstovnega v grafičnega. Vsebina predmetov
 računalništva se je hitro razširjala, kakor so se množili številni
 programski jeziki \cite{thesisAWebP}.
 
-Posebno mesto v izobraževanju ima programski jezik
-\textbf{LOGO}. Z ekipo ga je Seymour Papert. Značilnost programskega
-jezika je ta, da z programsko kodo rišemo grafiko, ki jo lahko
-predstavimo na zaslonu ali z \emph{``z želvo''}, ki se premika po tleh
-z ukazi in riše sliko na podlago. Programski jezik je bil prvič
-zasnovan v namene učenja programiranja.
+% Posebno mesto v izobraževanju ima programski jezik
+% \textbf{LOGO}. Z ekipo ga je Seymour Papert. Značilnost programskega
+% jezika je ta, da z programsko kodo rišemo grafiko, ki jo lahko
+% predstavimo na zaslonu ali z \emph{``z želvo''}, ki se premika po tleh
+% z ukazi in riše sliko na podlago. Programski jezik je bil prvič
+% zasnovan v namene učenja programiranja.
 
 %Dodaj slike logo + želva!
 
@@ -108,13 +108,13 @@ Računalniški program je zbirka navodil, ki opravlja točno določeno
 nalogo in jo izvajamo na računalniku. \textbf{Centralno procesna
   enota} je tista, ki izvajanje programa omogoča. Računalniški program
 navadno napiše \textbf{programer} v nekem \textbf{programskem jeziku},
-postopku pisanja programa pravimo \textbf{programiranje}. Programski
+postopku izdelave programa pravimo \textbf{programiranje}. Programski
 jezik omogoča, da je program zapisan v takšni obliki, da je berljiv za
-ljudi in je zapisan v \textbf{izvorni kodi}. Da računalnik razume
-napisan program, ga prevede \textbf{prevajalnik
-  (\emph{ang. compiler})} v \textbf{strojno kodo} ali ga
-\textbf{tolmači} tolmač.  
-\cite{wiki:computer_program}.
+ljudi. Shranjeni datoteki v taki obliki pravimo, da je \textbf{izvorna
+  datoteka} zapisana v \textbf{izvorni kodi}. Da računalnik razume
+napisan program v izvorni kodi, ga mora prevesti \textbf{prevajalnik
+  (\emph{ang. compiler})} v \textbf{strojno kodo} ali ga sproti prevaja
+\textbf{tolmač}.  \cite{wiki:computer_program}.
 
 \subsubsection{Algoritem}
 \label{sec:algoritem}
@@ -161,11 +161,12 @@ Algoritem med podanimi števili poišče največje število.
 Postopek zapisan v \textbf{besedilu}:
 \begin{enumerate}
 \tightlist
-\item Zapišemo si začetno število, naj bo $0$.
-\item Števila v seznamu preglejujemo po vrsti.
-\item Vsakič, ko najdemo večje število, ko je naše začasno število,
-\item To začasno število prečrtamo in napišemo tisto z seznamoa, ki je
-  večje.
+\item Zapišemo prvo \textbf{največje število}, ki naj bo v začetku enako $0$. 
+\item Števila v seznamu preglejujemo po vrsti tako, da
+\item vsako število primerjamo z \textbf{največjim številom} in če je število s
+  seznama večje, 
+\item to trenutno \textbf{največje število} prečrtamo in napišemo
+  tisto s seznam, ki je novo največje število.
 \item Postopek ponavljamo, dokler ne pridemo na konec seznama.
 \end{enumerate}
 
@@ -197,26 +198,23 @@ def najdiNajvecjeStevilo(seznam):
 \subsubsection{Programiranje in kodiranje}
 \label{sec:programiranje_kodiranje}
 
-Izraz programiranja smo že spoznali. Veliko krat slišimo tudi izraz,
-\textbf{``kodiranje'' (\emph{ang. coding})}. Povedali bi lahko da
-izraz pomeni, pisanje programske kode, konček izdelek, tisto kar na
-koncu damo \textbf{prevajalniku}, kar je \textbf{izvorna koda}, da
-prevede v \textbf{strojno kodo}, katero lahko potem zaganjamo.
-
-Za vsakim programiranjem stoji seveda nek programer, lahko bi rekli,
-da je za vsakim kodiranjem nekdo, ki mu pravimo
-\textbf{koder}. Programer in koder stav veliko krat, dana v isti koš,
-vendar si to čisto ne zaslužita, saj je programer, nekdo ki načrtuje
-rešitve, na različne načine in z razčličnimi orodji preden sploh
-zapiše kaj programske kode. Koder po drugi strani je tista oseba, ki
-se dobro spozna na programske jezike vendar, dela veliko krat po
-načrtu programera, je tisti ki na kocu zapiše rešitve in je pri tem
-zelo unčikovita. Čeprav se ta dva poklica zelo povezana in so meje med
-njima tudi veliko krat zabrisane sploh, če je programer in koder ena
-in ista oseba \cite{web:coder}.
+Izraz programiranje smo že spoznali. Velikokrat na spletu zasledimo
+tudi izraz \textbf{``kodiranje'' (\emph{ang. coding})}. Izraz pomeni,
+zapisovanje programa s programsko kodo izbranega programskega jezika,
+ki predstavlja končen izdelek oziroma izvorno datoteko. Lahko rečemo,
+da je za vsako kodiranje odgovorna oseba, ki ji pravimo
+\textbf{"koder"}. Podobno kot smo uporabili izraz programer za osebo,
+ki skrbi za razvoj in izdelavo programa. Programer in koder sta veliko
+krat, dana v isto vlogo, vendar njune naloge niso enake, saj je
+programer nekdo, ki načrtuje rešitve, na različne načine in z
+različnimi orodji. Naloga koder-ja je, da rešitve zapiše na naj bolj
+učinkovit način v programskem jeziku, katerega zares dobro
+pozna. Čeprav se ta dva poklica zelo povezana in so meje med njima
+tudi pogosto zabrisane, kar še posebej velja, če je ista oseba v vlogi
+programerja kot tudi koderja \cite{web:coder}.
 
 Pri samem poučevanju računalništva, lahko menimo, da je v prvi vrsti
-pomembno to, da se učimo strategije reševanja problemov, mora
+pomembno to, da se uči strategije reševanja problemov, zato mora
 obstajati težnja kako poučevati, da bo čim več učencev postalo dobrih
 programerjev in samo koderjev.
 
@@ -394,10 +392,12 @@ na primarnem področju izobraževanja, predvsem na srednjem in visokem
 šolskem področju. V sekundarnem področju izobraževanj se je uporabila
 predvsem za pisanje programske opreme, ki dopolnjuje izobraževanje,
 kot so fizikalne simulacije (\emph{fizleti}) in podobno. Eden od
-razlogov, da se je Java na tem področju dobro uveljavila je tudi ta,
-da omogoča zagon aplikacije s spletnega brskalnika, vendar je za to
-potrebna instalacija posebnega vtičnika, ki to omogoča. Primer
-\ref{prog:java01} prikazuje sintakso \emph{"Dobrodošel svet"}
+razlogov, da se je Java v preteklosti na tem področju dobro uveljavila
+je tudi ta, da omogoča zagon aplikacije s spletnega brskalnika, vendar
+je za to potrebna instalacija posebnega vtičnika, ki to omogoča. V
+zadnje času je zaradi varnosti praktično nemogoče zaganjati java
+aplete, zato je vedno manj primerna za uporabo v spletnem brskalniku.
+Primer \ref{prog:java01} prikazuje sintakso \emph{"Dobrodošel svet"}
 napisanega v Javi.
 %Ali moram podati referenco za te Hello world programe.
 %http://www.programmingsimplified.com/java-source-codes
@@ -443,16 +443,14 @@ int main()
 
 \textbf{Java Script (JS)} se je razvil z potrebe po bogatejših in dinamičnih
 spletnih straneh. Začetek spleta so predstavljali statični dokumenti,
-ki so bile povezane z hiper povezavami. Skirptni jezik z imenom Java
+ki so bile povezani z hiper povezavami. Skirptni jezik z imenom Java
 script se je prvič pojavil z spletnim brskalnikom \emph{Netscape
   2.0}. Takrat je bilo možno vstavljanje kratkih odsekov kode, ki so
 spletne strani naredile dinamične. Težnja po standardizaciji
 skriptnega jezika se je pojavila ko se je na trgu pojavil
 \emph{Internet explorer 3.0}, saj je ta imel svojo različico sriptnega
 jezika \emph{JScript}. Sedaj se standardni jezik imenuje \textbf{ECMA
-  Script} oz. točneje \textbf{ECMA-262}, ki opisuje glavne dele
-programskega jezika JavaScript brez specifikacij, spletnega
-brskalnika \cite{OO-JS}.
+  Script} oz. točneje \textbf{ECMA-262} \cite{OO-JS}.
 
 Če smo v prejšnjih poglavjih govorili, da sta bila \textbf{Java} in
 \textbf{C++} večnamenska jezika, je JS bil eden tistih, ki so tekli
@@ -581,8 +579,8 @@ strani \emph{``Learning python the hard way''} \cite{web:PTHardWay}.
 \label{sec:izpis_rac_operacije}
 
 Osnovno interakcijo z računalnikom lahko opišemo na naslednji
-način. Računalniku damo neke vhodne podatke, ta podatke po navodilu
-programa obdela in nam poda rezultate na neko izhodno naprava. Ta
+način. Računalniku damo vhodne podatke, ta podatke po navodilu
+programa obdela in nam poda rezultate na izbrano izhodno naprava. Ta
 izhodna naprava je na primer zaslon in na njem se izpisujejo obdelani
 podatki. Izpišimo nekaj stavkov, pri tem uporabljamo ukaz
 \texttt{print}.
@@ -635,7 +633,7 @@ False
 \subsubsection{Spremenljivke}
 \label{sec:spremenljivke}
 
-V tem poglavju bomo uresničili naslednje cilje vendar smo jim nekoliko
+V tem poglavju bomo uresničili naslednje cilje, ki smo jim nekoliko
 spremenili vrstni red:
 \begin{itemize}
 \tightlist
@@ -654,9 +652,9 @@ Spremenljivke so način kako shranjujemo podatke v računalniku.  Ime
 spremenljivke ima podobno vlogo kot imena ljudi ali stvari v
 vsakdanjem življenju. Ljudje in stvari imajo imena zato, da si jih
 lažje zapomnimo in se z njimi in o njih lažje pogovarjamo. Podobno je
-to v programiranju, izbrati si moramo dobra imena spremenljivk, saj
-bomo tako lažje brali napisano kodo. Poglejmo primer
-\ref{prog:spremenljivke}.
+to v programiranju, zato si moramo izbrati dobra imena spremenljivk,
+saj bomo tako lažje brali napisano kodo. Poglejmo primer dobrega
+poimenovanja spremenljivk \ref{prog:spremenljivke}.
 
 \begin{examplebox}[label={prog:spremenljivke}]{Izpis besedila na
     zaslon | \texttt{03\_uporaba\_spremenljivk.py} \cite{web:PTHardWay}}
@@ -712,22 +710,23 @@ V tem poglavju bomo uresničili naslednje cilje: \textbf{znajo
 \begin{examplebox}[label={prog:pogojni}]{Program odločitve |
     \texttt{05\_pogojni\_stavki.py} \cite{web:PTHardWay}}
 \textbf{Navodilo naloge:}
-Kodo programa spremeni tako, da boo potniki potovali z avtomobili. 
+Število potnikov spremeni tako, da bo kombi dovolj za vse potnike. 
 \rule{\textwidth}{.4pt}
 \begin{lstlisting}[language=Python]
-potniki = 40
-avtomobili = 40
-if avtomobili > potniki:
-    print ("Pojdite z avtomobili.")
-elif avtomobili < potniki:
-    print ("Ne morete z avtomobili.")
+potniki = 7
+if potniki <= 5:
+    print ("Pojdite z avtomobilom.")
+elif potniki > 5 and potniki <= 9:
+    print ("Pojdite z kombijem. ")
+elif potniki > 9 and potniki <= 50:
+    print ("Pojdita z avtobusom.")
 else:
      print ("Ne morem se odločiti.")
 \end{lstlisting}
 \tcblower
 \begin{Verbatim}[fontsize=\footnotesize]
 $ python 05_pogojni_stavki.py
-Ne morem se odločiti.
+Pojdite z kombijem.
 \end{Verbatim}
 \end{examplebox}
 
@@ -746,12 +745,12 @@ in ga znajo uporabiti za rešitev problema}.
 \begin{lstlisting}[language=Python]
 #Podan seznam celih stevil.
 cela_st = [11, 41, 2, 32, 12]
-vsota_lihih = 0
+st_lihih = 0
 for st in cela_st:
     if st%2 == 1:
         print (st)
-        vsota_lihih += 1
-print ("Vseh lihih stevil:", vsota_lihih)
+        st_lihih += 1
+print ("Vseh lihih stevil:", st_lihih)
 \end{lstlisting}
 \tcblower
 \begin{Verbatim}[fontsize=\footnotesize]
