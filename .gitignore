@@ -14,6 +14,9 @@ images/sc_web_orig/*
 *.txt
 *.lot
 *.el
+*.gz
+.*
+
 
 #Other
 .projectile
@@ -26,7 +29,6 @@ dispozicija.tex
 porocilo.pdf
 diploma-fnm-example.tex
 _region_.tex
-.*
 /SP_za_učenje_prog-Gregor_Nemec-v0001.pdf
 /_region_.pdf
 /vsebina_backup.tex
