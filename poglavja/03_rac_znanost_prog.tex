@@ -207,10 +207,9 @@ pozna. Poklica sta zelo povezana in so meje med njima
 tudi pogosto zabrisane, kar še posebej velja, če je ista oseba v vlogi
 programerja kot tudi koderja \cite{web:coder}.
 
-Pri poučevanju računalništva lahko menimo, da je v prvi vrsti
-pomembno to, da se uči strategije reševanja problemov, zato mora
-obstajati težnja, kako poučevati, da bo čim več učencev postalo dobrih
-programerjev in koderjev.
+Pri poučevanju računalništva lahko menimo, da je v prvi vrsti pomembno to, da se
+uči strategije reševanja problemov, zato mora obstajati težnja, kako poučevati,
+da bo čim več učencev postalo predvsem dobrih programerjev.
 
 \subsubsection{Urejevalnik besedil}
 \label{sec:urejevalnik_besedil}
@@ -291,7 +290,7 @@ in vse do konceptov. Podajmo primer objekta mačke. Mačka ima številne
 karakteristike, kot so barva, ime, teža \dots, tem lastnostim pravimo,
 da so lastnosti objekta. Mačka je živo bitje, zato njenemu početju,
 kot je mjavkanje, spanje, igranje \dots, pravimo, da so metode
-objekta. Pri objetih lahko uporabimo analogijo in objekte poimenujemo
+objekta. Pri objektih lahko uporabimo analogijo in objekte poimenujemo
 s samostalniki, metode so glagoli in vrednosti lastnosti objekta so
 pridevniki. V nadaljevanju si bomo ogledali nekatere značilnosti, ki
 definirajo programski jezi kot OO \cite{OO-JS}.
@@ -422,9 +421,7 @@ uči predvsem na višjem in univerzitetnem izobraževalnem nivoju \cite{wiki:cpp
 %https://en.wikibooks.org/wiki/C%2B%2B_Programming/Examples/Hello_world
 \begin{examplebox}[label={prog:cpp01}]{Program napisan v C++}
 \begin{lstlisting}[language=C++]
-// 'Hello World!' program
 #include <iostream>
-
 int main()
 {
   std::cout << "Hello World!" << std::endl;
@@ -488,8 +485,8 @@ jezik. Njegovo kodo, podobno kot JS, poganja tolmač. Zasnovan je tako,
 da je koda čim bolj berljiva in njegova sintaksa omogoča, da
 programske koncepte zapišemo v čim manj vrsticah, kakor bi jih lahko v
 Javi ali C++. Če so posamezni odseki ali bloki programske kode pri
-Javi in C++ označeni z zavitimi oklepaji (``{}''), jih v Pythonu
-označimo s tabulatorskim zamikom. V Pythonu lahko uresničimo več
+Javi in C++ označeni z zavitimi oklepaji (\{\}), jih v Pythonu
+izrazimo s tabulatorskim zamikom. V Pythonu lahko uresničimo več
 programskih paradigem, kot je OO ali proceduralno
 programiranje. Omogočen je dinamičen tip spremenljivk, ima urejeno
 samodejno upravljanje s pomnilnikom in ima veliko standardno
@@ -626,38 +623,31 @@ False
 \subsubsection{Spremenljivke}
 \label{sec:spremenljivke}
 
-V tem poglavju bomo uresničili naslednje cilje, ki smo jim nekoliko
-spremenili vrstni red:
+Spremenljivke so način, kako shranjujemo podatke v računalniku. Ime
+spremenljivke ima podobno vlogo kot imena ljudi ali stvari v vsakdanjem
+življenju. Ljudje in stvari imajo imena zato, da si jih lažje zapomnimo in se z
+njimi in o njih lažje pogovarjamo. Podobno je tudi v programiranju, zato si
+moramo izbrati dobra imena spremenljivk \ref{prog:spremenljivke}. V tem poglavju
+bomo uresničili naslednje cilje, ki smo jim nekoliko spremenili vrstni red:
 \begin{itemize}
 \tightlist
-\item \textbf{znajo izpisovati vrednosti spremenljivk med izvajanjem programa
-  in izpisati končni rezultat},
+\item \textbf{znajo v program vključiti spremenljivke in jim izpisovati
+    vrednosti med izvajanjem programa in izpisati končni rezultat},
 \item \textbf{znajo spremenljivkam spremeniti vrednost s prireditvenim
   stavkom},
-\item \textbf{znajo v program vključiti konstante in spremenljivke},
 \item \textbf{ razumejo različne podatkovne tipe in jih znajo uporabiti v
   programu},
 \item \textbf{znajo v programu prebrati vhodne podatke in jih vključiti v
   program}.
 \end{itemize}
 
-Spremenljivke so način, kako shranjujemo podatke v računalniku.  Ime
-spremenljivke ima podobno vlogo kot imena ljudi ali stvari v
-vsakdanjem življenju. Ljudje in stvari imajo imena zato, da si jih
-lažje zapomnimo in se z njimi in o njih lažje pogovarjamo. Podobno je
-tudi v programiranju, zato si moramo izbrati dobra imena spremenljivk,
-saj bomo tako lažje brali napisano kodo. Poglejmo primer dobrega
-poimenovanja spremenljivk \ref{prog:spremenljivke}.
-
 \begin{examplebox}[label={prog:spremenljivke}]{Izpis besedila na
     zaslon | \texttt{03\_uporaba\_spremenljivk.py} \cite{web:PTHardWay}}
-\textbf{Navodilo naloge:}
-
-Na parkirišču je 100 avtomobilov, vsak izmed avtomovilov ima 5
-sedežev. S temi avtomobili želimo pripeljati 90 potnikov, od tega jih
-ima 30 vozniško dovoljenje. Izračunaj in izpiši naslednje podatke.
+  \textbf{Navodilo naloge:} Na parkirišču je 100 avtomobilov, vsak izmed
+  avtomobilov ima 5 sedežev. S temi avtomobili želimo pripeljati 90 potnikov, od
+  tega jih ima 30 vozniško dovoljenje. Izračunaj in izpiši naslednje podatke.
 \begin{itemize}
-\item Koliko avtomobilov je na voljo.  Koliko šoferjev je na voljo?
+%\item Koliko avtomobilov je na voljo.  Koliko šoferjev je na voljo?
 \item Koliko avtomobilov bo ostalo na parkirišču, če bodo vozili vsi
   šoferji?
 \item Koliko ljudi lahko prepeljemo z vsemi avtomobili?
@@ -677,8 +667,6 @@ kapac_avtomob = avtomobili * prostor_v_avto
 avtomob_na_potnikov = potniki/prostor_v_avto
 povpr_st_potnikov = potniki/soferji
 #3. Izpišimo vse zahtevane podatke.
-print ("Na voljo je", avtomobili, "avtomobilov.")
-print ("Na voljo je", soferji, "šoferjev.")
 print ("Na parkirišču bo ostalo",avtomob_na_park, "avtomobilov.")
 print ("Z vsemi avtomobili prepeljemo", kapac_avtomob, "potnikov.")
 print ("Povpr. st. potnikov je",povpr_st_potnikov, ", če vozijo vsi šoferji.")
@@ -686,13 +674,16 @@ print ("Povpr. st. potnikov je",povpr_st_potnikov, ", če vozijo vsi šoferji.")
 \tcblower
 \begin{Verbatim}[fontsize=\footnotesize]
 $ python 03_uporaba_spremanljivk.py
-Na voljo je  100 avtomobilov.
-Na voljo je  30 šoferjev.
 Na parkirišču bo ostalo  70 avtomobilov.
 Z vsemi avtomobili lahko prepeljemo  500.0 potnikov.
 Povprečno stevilo potnikov je  3, če vozijo vsi šoferji.
 \end{Verbatim}
 \end{examplebox}
+
+%print ("Na voljo je", avtomobili, "avtomobilov.")
+%print ("Na voljo je", soferji, "šoferjev.")
+%Na voljo je  100 avtomobilov.
+%Na voljo je  30 šoferjev.
 
 \subsubsection{Pogojni stavki in vejitve}
 \label{sec:pogojni_stavki_vejitve}
@@ -711,8 +702,6 @@ if potniki <= 5:
     print ("Pojdite z avtomobilom.")
 elif potniki > 5 and potniki <= 9:
     print ("Pojdite s kombijem. ")
-elif potniki > 9 and potniki <= 50:
-    print ("Pojdite z avtobusom.")
 else:
      print ("Ne morem se odločiti.")
 \end{lstlisting}
@@ -723,6 +712,16 @@ Pojdite s kombijem.
 \end{Verbatim}
 \end{examplebox}
 
+%potniki = 7
+%if potniki <= 5:
+%    print ("Pojdite z avtomobilom.")
+%elif potniki > 5 and potniki <= 9:
+%    print ("Pojdite s kombijem. ")
+%elif potniki > 9 and potniki <= 50:
+%    print ("Pojdite z avtobusom.")
+%else:
+%     print ("Ne morem se odločiti.")
+
 \subsubsection{Zanke}
 \label{sec:zanke}
 
@@ -731,10 +730,9 @@ in ga znajo uporabiti za rešitev problema}.
 
 \begin{examplebox}[label={prog:zanka}]{Zanka |
     \texttt{06\_zanka.py} \cite{web:PTHardWay}}
-  \textbf{Navodilo naloge:}
-  Napišite zanko, ki pregleda seznam in prešteje ter izpiše vsa liha
-  števila.
-\rule{\textwidth}{.4pt}
+  \textbf{Navodilo naloge:} Napišite zanko, ki prešteje ter
+  izpiše vsa liha števila. \\
+  \rule{\textwidth}{.4pt}
 \begin{lstlisting}[language=Python]
 #Podan seznam celih števil.
 cela_st = [11, 41, 2, 32, 12]
