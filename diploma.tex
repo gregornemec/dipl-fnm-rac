@@ -9,10 +9,13 @@
 
 %%% Preamble
 \PassOptionsToPackage{table}{xcolor}
-\documentclass[12pt, a4paper, oneside, slovene]{article}
+\documentclass[12pt, a4paper, onside, slovene]{article}
 %\documentclass[paper=a4, fontsize=12pt]{scrartcl}	% Article class of KOMA-script with 11pt font and a4 format
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=0.5cm]{geometry}
 
-\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+%\setlength{\oddsidemargin}{5mm}
+%\setlength{\evensidemargin}{5mm}
+
 \usepackage[T1]{fontenc}
 \usepackage{fourier}
 
@@ -56,17 +59,24 @@
 \setlength{\headheight}{13.6pt}
 %\setlength{\footheight}{13.6pt}
 
-\lhead[]{}
-\chead[]{}
-\rhead[]{}
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  \lfoot[\thepage]{}
+  \rfoot[]{\thepage}
 
-\lfoot[]{}
-\cfoot[\thepage]{\thepage}
-\rfoot[]{}
+  \renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+  \renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+}
+
+\fancypagestyle{beginstyle}{
+  \fancyhf{}
+  \rfoot[\thepage]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+  \renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+}
 
 
-\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
-\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+
 
 \usepackage[pdftex,dvipsnames,table,x11names,rgb,html]{xcolor}
 
@@ -244,16 +254,24 @@ title= #2,#1
 \thispagestyle{empty}
 \input{zahvala.tex}
 \newpage
-\pagestyle{fancy}
+\pagestyle{beginstyle}
 \pagenumbering{Roman}
 \setcounter{page}{4}
 \input{izjava.tex}
+\newpage
+\input{program_dela.tex}
 \newpage
 \input{povzetek_si.tex}
 \newpage
 \input{povzetek_en.tex}
 \newpage
-\pagestyle{fancy}
+\let\tempmargin\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tempmargin
+\reversemarginpar
+\newgeometry{a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm,
+  bindingoffset=0.5cm, twoside}
+\pagestyle{mainstyle}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \tableofcontents
